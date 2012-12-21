@@ -1,0 +1,57 @@
+
+/* ############################################################################################ */
+/* RECEIPT PAGE */
+/* ############################################################################################ */
+
+.receipt-content {
+	position: relative;
+	width: 850px;
+	margin: -180px auto 0 auto;
+	top: 50%;
+}
+
+.receipt-content .left-column {
+	text-align: right;
+}
+
+.receipt-content h1 {
+	margin: 0 auto 40px auto;
+	padding-left: 10px;
+	width: 190px;
+	display: block;
+	position: relative;
+	font-size: 30px;
+	font-family: 'DaysRegular';
+	color: white;
+	text-transform: uppercase;
+}
+
+.receipt-content .thankyou {
+	color: #FFF;
+	font-family: 'DaysRegular';
+	text-transform: uppercase;
+	text-align: right;
+	font-size: 1.2em;
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.receipt-confirmation {
+	color: #FFF;
+	line-height: 1.2em;
+}
+
+.receipt-dataheader {
+	color: #8DC72D;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.receipt-data {
+	font-size: 2em;
+	margin-top: 6px;
+	color: white;
+}

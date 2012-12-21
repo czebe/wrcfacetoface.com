@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title></title>
+<link href="/StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" />
+<link type="text/css" media="screen,projection" href="/StyleSheets/base.css" rel="stylesheet" />
+<link type="text/css" media="screen,projection" href="/StyleSheets/screen.css" rel="stylesheet" />
+<link rel="stylesheet" href="/CatalystStyles/Box.css" type="text/css" media="screen" />
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+
+<div class="center over_all_under">
+<!--[if !IE]>start breadcrumb<![endif]-->
+<div class="center breadcrumb">
+<p><a href="/home">Home</a> / <a href="/ForumRetrieve.aspx?ForumID=672">Forum</a> / {tag_topicname}</p>
+</div>
+<!--[if !IE]>end breadcrumb<![endif]-->
+</div>
+<div class="wrap_fullwidth big_padding" id="intro">
+<div class="center">
+<h2 id="page_title" class="line_back_ground">{tag_forumname}</h2>
+<p id="slogan"></p>
+</div>
+</div>
+<br />
+<br />
+<div class="wrap_fullwidth" id="main">
+<div class="center">
+<div class="box_fullwidth">
+<h2 class="heading">{tag_topicname}</h2>
+<div class="forum-posts-container">
+<div class="error">{module_error}</div>
+<div class="editor">{tag_editor}</div>
+<ul class="cap-top">
+    <li class="user">{module_whosloggedin}</li>
+    <li class="actions">{tag_topicsubscribe,
+    <div class="light_button">Subscribe to Topic</div>
+    ,
+    <div class="light_button">Unsubscribe</div>
+    } {tag_newpostlink,
+    <div class="light_button">New Post</div>
+    }</li>
+</ul>
+<div class="post-list">     {tag_postlist}   </div>
+<ul class="cap-bottom">
+    <li class="nav-page">&nbsp;</li>
+    <li class="actions">{tag_topicsubscribe,
+    <div class="light_button">Subscribe to Topic</div>
+    ,
+    <div class="light_button">Unsubscribe</div>
+    } {tag_newpostlink,
+    <div class="light_button">New Post</div>
+    }</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+{module_whosloggedin}
+
+
+</body>

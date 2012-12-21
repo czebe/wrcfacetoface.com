@@ -1,0 +1,122 @@
+
+$wrc-green: #8FC730;
+$wrc-grey-text: #808080;
+$triangle-ratio: 0.2833;
+
+@mixin absolute {
+	display: block;
+	position: absolute;
+}
+
+@mixin centered {
+	top: 50%;
+	left: 50%;
+}
+
+@mixin align-tl {
+	top: 0;
+	left: 0;
+}
+
+@mixin align-tr {
+	top: 0;
+	right: 0;
+}
+
+
+@mixin align-bl {
+	bottom: 0;
+	left: 0;
+}
+
+@mixin align-br {
+	bottom: 0;
+	right: 0;
+}
+
+@mixin fullsize {
+	width: 100%;
+	height: 100%;
+}
+
+@mixin fontstyle-heading($fontSize: 28px, $lineHeight: 32px) {
+	font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: normal;
+	color: #FFF;
+}
+
+@mixin fontstyle-bodytext($fontSize: 14px, $lineHeight: 18px) {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	font-weight: normal;
+	color: $wrc-grey-text;
+}
+
+@mixin fontstyle-detailstext {
+	color: $wrc-grey-text;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+@mixin triangle-border($elementHeight, $elementWidth, $color, $direction) {
+	@include absolute;
+	content: "";
+	top: 0;
+	$halfHeight: round($elementHeight / 2);
+	$triangleWidth: round($elementHeight * $triangle-ratio);
+	@if ($direction < 0) {
+		margin-left: (-$triangleWidth)+px;
+	} @else {
+		margin-left: ($elementWidth)+px;
+	}
+	border: {
+		style: solid;
+		
+		
+		@if ($direction < 0) {
+			width: $halfHeight+px $triangleWidth+px $halfHeight+px 0;
+			color: transparent $color transparent transparent;
+		} @else {
+			width: $halfHeight+px 0 $halfHeight+px $triangleWidth+px;
+			color: transparent transparent transparent $color;
+		}
+	}
+	
+}
+
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		    @content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin mediaquery($queryProperty: width, $mediaMin: 100, $mediaMax: 0) {
+	$query: "";
+	@if $mediaMax > $mediaMin {
+		$query: "only screen and (min-" + $queryProperty + ": " + $mediaMin + ") and (max-" + $queryProperty + ": " + $mediaMax + ")";
+	}
+	@else {
+		$query: "only screen and (min-" + $queryProperty + ": " + $mediaMin + ")";
+	}
+
+	$query: unquote($query);
+
+	@media #{$query} {
+		@content;
+	}
+}

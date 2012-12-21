@@ -1,0 +1,91 @@
+
+@import "bourbon/bourbon";
+@import "mixins";
+
+.page {
+	background: url(/i/dither.png) repeat 50% 50% transparent;
+
+	> article {
+		@include absolute;
+		@include align-tl;
+		@include fullsize;
+
+		> div {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+	}
+
+	hgroup {
+		display: block;
+		position: relative;
+		height: 20%;
+
+		h1 {
+			display: block;
+			position: relative;
+			@include fontstyle-heading;
+			margin-bottom: 20px;
+			margin-top: 50px;
+			width: 100%;
+			text-align: center;
+		}
+
+		h2 {
+			display: block;
+			position: relative;
+			margin-bottom: 20px;
+			width: 100%;
+			text-align: center;
+
+			span {
+				display: inline-block;
+				width: 350px;
+				@include fontstyle-heading(14px, 16px);
+				color: $wrc-green;
+			}
+		}
+	}
+
+	.browser-icons {
+		position: relative;
+		width: 100%;
+		height: 256px;
+		margin: 30px 0;
+		width: 700px;
+		text-align: center;
+		left: 50%;
+		margin-left: -350px;
+
+		a {
+			display: inline-block;
+		}
+	}
+
+	p {
+		display: block;
+		position: relative;
+		width: 700px;
+		left: 50%;
+		margin-left: -350px;
+
+		@include fontstyle-bodytext(16px, 22px);
+		color: #EEE;
+	}
+
+	h3 {
+		display: block;
+		position: absolute;
+		bottom: 160px;
+		left: 50%;
+		width: 280px;
+		margin-left: -140px;
+		text-align: center;
+
+		a {
+			@include fontstyle-heading(12px, 16px);
+			text-decoration: none;
+		}
+	}
+}

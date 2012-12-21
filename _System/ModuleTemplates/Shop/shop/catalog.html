@@ -1,0 +1,7 @@
+{% if catalog.products.size == 0 -%}
+	<ul class="empty-catalog"><li><article><span>There are no available products in this group. We're most likely out of stock.</span></article></li></ul>
+{% else -%}
+	<ul data-catalog="{{catalog.name | downcase}}">
+		{module_productList, catalogId="{{catalog.id}}", sortBy="weighting desc", itemsPerPage="9999", template="/_System/ModuleTemplates/Shop/shop/productList.html"}
+	</ul>
+{% endif -%}

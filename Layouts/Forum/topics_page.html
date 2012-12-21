@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title></title>
+<link href="/StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" />
+<link type="text/css" media="screen,projection" href="/StyleSheets/base.css" rel="stylesheet" />
+<link type="text/css" media="screen,projection" href="/StyleSheets/screen.css" rel="stylesheet" />
+<link rel="stylesheet" href="/CatalystStyles/Box.css" type="text/css" media="screen" />
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+
+<div class="center over_all_under">
+<!--[if !IE]>start breadcrumb<![endif]-->
+<div class="center breadcrumb">
+<p><a href="/home">Home</a> / Forum</p>
+</div>
+<!--[if !IE]>end breadcrumb<![endif]-->
+</div>
+<div class="wrap_fullwidth big_padding" id="intro">
+<div class="center">
+<h2 id="page_title" class="line_back_ground">{tag_forumname}</h2>
+<p id="slogan"></p>
+</div>
+</div>
+<br />
+<br />
+<div class="wrap_fullwidth" id="main">
+<div class="center">
+<div class="box_fullwidth">
+<div class="forum-container">
+<div class="error">{module_error}</div>
+<div class="editor">{tag_editor}</div>
+<ul class="cap-top">
+    <li class="user">{module_whosloggedin}</li>
+    <li class="actions">{tag_newtopiclink,
+    <div class="light_button">New Topic</div>
+    }</li>
+</ul>
+<table class="topic-list" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr class="header">
+            <th class="name">Topic Name</th>
+            <th class="replies">Replies</th>
+            <th class="views">Views</th>
+            <th class="date">Last Post</th>
+        </tr>
+        <tr>
+            <td colspan="4">               {tag_topiclist}        </td>
+        </tr>
+    </tbody>
+</table>
+<ul class="cap-bottom">
+    <li class="nav-page">{tag_previouspage,<img alt="" src="/CatalystImages/Module_Previous.png" />} {tag_nextpage,<img alt="" src="/CatalystImages/Module_Next.png" />}</li>
+    <li class="actions">{tag_newtopiclink,
+    <div class="light_button">New Topic</div>
+    }</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>

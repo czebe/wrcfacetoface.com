@@ -1,0 +1,21 @@
+var Oshoplang = {
+    RemoveError: 'ERROR: To remove or update quantities select the View Cart link.',
+    Added: '  item(s) added to your cart.',
+    OutOfStock: 'Either product is out of stock or choose a smaller quantity',
+    PreOrder: ' item(s) pre-ordered and added to your cart.',
+    MinLimit: 'ERROR: Quantity entered is too small, please enter a larger quantity.',
+    MaxLimit: 'ERROR: Quantity entered is too large, please enter a smaller quantity.',
+    InvalidQuantity: 'ERROR: Quantity entered is not valid.',
+    CartEmpty: 'Your shopping cart is empty.',
+    CartEmptyFormatted: 'Your shopping cart is empty. <span>Go back to Products and pick some items.</span>',
+    CartUpdateSuccess: 'Shopping cart updated successfully.',
+    InvalidShip: 'ERROR: Please choose a valid shipping option.',
+    ChooseState: 'ERROR: Please choose a destination state to calculate state tax.',
+    EnterZip: 'ERROR: Please enter in your Zip/Postcode to calculate shipping costs for your order.',
+    ChooseShip: 'ERROR: Please select a shipping charge for your order.',
+    IncorrectGForm: 'ERROR: Your gift voucher form is not setup correctly. Please reset to original to restore.',
+    EnterGName: 'ERROR: Please enter a name for the recipient of your gift voucher.',
+    InvalidGEmail: 'ERROR: Please enter a valid email address for the recipient of your gift voucher.',
+    EnterGMessage: 'ERROR: Please enter a personal message for the recipient of your gift voucher.',
+    ChooseAttribute: 'ERROR: Please choose relevant options before adding to cart.'
+};

@@ -1,0 +1,67 @@
+
+@import "bourbon/bourbon";
+
+/* ############################################################################################ */
+/* RASTER SPRITES */
+/* ############################################################################################ */
+
+/* SET SIZE TO HALF */
+.rastersprite {background-repeat: no-repeat; background-image:url(/i/rastersprite.png); background-size: 225px 64px;}
+
+@include hidpi(1.5) {
+	.rastersprite {
+		background-image:url(/i/rastersprite-2x.png);
+	}
+}
+
+.carnationgroup-logo { width: 147px; height: 11px; background-position: -3px -13px; }
+.cartbasket { width: 104px; height: 28px; background-position: -3px -31px; }
+.cartsummary-basket { width: 22px; height: 15px; background-position: -152px -13px; }
+.paypal { width: 112px; height: 30px; background-position: -110px -31px; }
+.step-shadow { width: 170px; height: 8px; background-position: -3px -3px; }
+
+
+/* ############################################################################################ */
+/* VECTOR SPRITES */
+/* ############################################################################################ */
+
+.vectorsprite {background-repeat: no-repeat;background-image:url(/i/vectorsprite.png)}
+
+.arrow-left {width:9px; height:22px; background-position: -319px -2px}
+.arrow-right {width:9px; height:22px; background-position: -330px -2px}
+.black-prev-next {width:220px; height:60px; background-position: -100px -98px}
+.cartsummary {width:277px; height:31px; background-position: -571px -2px}
+.checkbox-bg {width:40px; height:33px; background-position: -44px -36px}
+.checked {width:40px; height:33px; background-position: -2px -36px}
+.contact-email {width:29px; height:18px; background-position: -68px -2px}
+.contact-location {width:22px; height:32px; background-position: -873px -2px}
+.contact-phone {width:21px; height:31px; background-position: -850px -2px}
+.downloads-thumbnail-shine {width:105px; height:92px; background-position: -554px -98px}
+.downloads-thumbnail-stroke {width:93px; height:80px; background-position: -459px -98px}
+.dragbar {width:18px; height:110px; background-position: -661px -98px}
+.eye-icon {width:30px; height:18px; background-position: -212px -2px}
+.fb-join {width:60px; height:20px; background-position: -244px -2px}
+.green-prev-next {width:220px; height:60px; background-position: -652px -36px}
+.hdragbar {width:111px; height:18px; background-position: -99px -2px}
+.info-point {width:18px; height:16px; background-position: -48px -2px}
+.input-bg {width:294px; height:37px; background-position: -86px -36px}
+.input-small-bg {width:128px; height:37px; background-position: -382px -36px}
+.largedot {width:428px; height:370px; background-position: -2px -260px}
+.largedot-shine {width:324px; height:370px; background-position: -432px -260px}
+.mainmenu-line1 {width:35px; height:62px; background-position: -359px -98px}
+.mainmenu-line2 {width:35px; height:62px; background-position: -322px -98px}
+.mainmenu-point {width:58px; height:50px; background-position: -532px -36px}
+.mainmenu-point-over {width:58px; height:50px; background-position: -592px -36px}
+.menu-opener {width:62px; height:30px; background-position: -443px -2px}
+.menu-opener-over {width:62px; height:30px; background-position: -507px -2px}
+.onedot {width:11px; height:10px; background-position: -2px -2px}
+.prev-next-shine {width:96px; height:60px; background-position: -2px -98px}
+.quantity-button {width:32px; height:27px; background-position: -341px -2px}
+.quotemark {width:18px; height:38px; background-position: -512px -36px}
+.remove {width:32px; height:27px; background-position: -409px -2px}
+.select-arrow {width:32px; height:27px; background-position: -375px -2px}
+.smalldot-shine {width:61px; height:70px; background-position: -396px -98px}
+.threedots {width:31px; height:15px; background-position: -15px -2px}
+.thumbnail-stroke {width:185px; height:160px; background-position: -681px -98px}
+.twodots {width:11px; height:21px; background-position: -306px -2px}
+

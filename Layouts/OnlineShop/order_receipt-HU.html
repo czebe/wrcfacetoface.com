@@ -1,0 +1,35 @@
+<div class="page receipt">
+	<div class="form-bg-container">
+		<svg id="form-bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960px" height="535px" viewBox="0 0 960 535" xml:space="preserve">
+			<polygon id="dot" points="22.35,80 0,40 22.35,0 69.64,0 92,40 69.64,80"/>
+		</svg>
+	</div>
+	<div class="receipt-content">
+		<h1>Receipt<span class="rastersprite cartbasket"></span></h1>
+		<div class="left-column">
+			<hr class="horizontal-line-32px align-top align-right" />
+			<span class="thankyou">Thank you for<br />your purchase</span>
+			<hr class="horizontal-line-32px align-bottom align-right" />
+		</div>
+		<div class="right-column">
+			<p class="receipt-confirmation">Thank you for your purchase. Please find confirmation of your order and payment below. You will also receive an email confirmation of your order.</p>
+			<h2 class="receipt-dataheader">Total amount to be charged</h2>
+			<p class="receipt-data formatted-price">{tag_amount}</p>
+			<h2 class="receipt-dataheader">Invoice/Reference Number</h2>
+			<p class="receipt-data">{tag_invoicenumber}</p>
+		</div>
+	</div>
+</div>
+<nav class="steps">
+	<ul>
+		<li class="inactive-step disabled-step"><a><span>Cart</span><div class="rastersprite step-shadow"></div></a></li>
+		<li class="inactive-step disabled-step"><a><span>Shipping</span><div class="rastersprite step-shadow"></div></a></li>
+		<li class="inactive-step disabled-step"><a><span>Billing</span><div class="rastersprite step-shadow"></div></a></li>
+		<li class="inactive-step disabled-step"><a><span>Payment</span><div class="rastersprite step-shadow"></div></a></li>
+		<li><a><span>Finish</span><div class="rastersprite step-shadow"></div></a></li>
+	</ul>
+</nav>
+<script>
+	var scriptsQueue = scriptsQueue || new Array();
+	scriptsQueue.push('/js/order.js');
+</script>

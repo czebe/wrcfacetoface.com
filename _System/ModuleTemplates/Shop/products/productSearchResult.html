@@ -1,0 +1,30 @@
+{% if get.a %}
+<div class="shop-productSearchResult">
+	{% if products.nav.total != 0 %}
+		<ul class="shop-productList">
+			{% for product in products %}
+			<li>
+				{module_product productId="{{product.Id}}" catalogId="{{product.catalogId}}" template="/_System/ModuleTemplates/Shop/productSmall.html"}
+			</li>
+			{% endfor %}
+		</ul>
+		<h4>Products: {{products.nav.from}} - {{products.nav.to}} of {{products.nav.total}}</h4>
+        <div class="shop-navigation">
+            {% if products.nav.firstUrl != "" %}
+            	<a class="shop-navigationFirst" href="{{products.nav.firstUrl}}">First</a>
+            {% endif %}
+            {% if products.nav.previousUrl != "" %}
+            	<a class="shop-navigationPrevious" href="{{products.nav.previousUrl}}">Previous</a>
+            {% endif %}            
+            {% if products.nav.nextUrl != "" %}
+            	<a class="shop-navigationNext" href="{{products.nav.nextUrl}}">Next</a>
+            {% endif %}
+            {% if products.nav.lastUrl != "" %}
+            	<a class="shop-navigationLast" href="{{products.nav.lastUrl}}">Last</a>
+            {% endif %}
+        </div>
+	{% else %}
+		<h4>Your search did not match any products.</h4>
+	{% endif %}    
+</div>
+{% endif %}

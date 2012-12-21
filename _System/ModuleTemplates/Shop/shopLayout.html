@@ -1,0 +1,35 @@
+{% section name="head" -%}
+	<link rel="stylesheet" href="/css/cart-summary.css" type="text/css" media="screen" />
+	{% if product -%}
+		<script>document.title = "{{product.name}} // {{catalog.name}} // WRC Face to Face"</script>
+	{% else -%}
+		<script>document.title = "{{catalog.name}} // WRC Face to Face"</script>
+	{% endif -%}
+{% endsection -%}
+<body>
+    <section id="cartsummary-container">
+	    {module_shoppingcartsummary template="/_System/ModuleTemplates/Shop/products/cartSummary.html"}
+    </section>
+	{% if product -%}
+		<!-- PRODUCT PAGE -->
+		{module_product,
+			catalogId="{{catalog.id}}",
+			productId="{{product.id}}",
+			template="/_System/ModuleTemplates/Shop/products/productLarge.html"
+		}
+		<!-- CATALOG BREADCRUMB -->
+		{module_catalogbreadcrumb catalogID="{{catalog.id}}" template="/_System/ModuleTemplates/Shop/products/catalogBreadcrumb.html"}
+	{% else -%}
+		{% if catalog.name == 'Products' -%}
+			{% comment -%} SHOP PAGE NEED TO OUTPUT ALL CATALOGS {% endcomment -%}
+			{module_catalogList parentCatalogId="{{catalog.id}}" sortBy="weighting asc" itemsPerPage="20" template="/_System/ModuleTemplates/Shop/products/catalogList.html"}
+		{% else -%}
+			{% comment -%} DIRECT ACCESS CATALOG PAGE JUST NEED TO SET THE ACTIVE CATALOG {% endcomment -%}
+			{% section name="head" -%}
+			<script>
+				window.location="/products#{{catalog.name | downcase}}";
+			</script>
+			{% endsection -%}
+		{% endif -%}
+	{% endif -%}
+</body>

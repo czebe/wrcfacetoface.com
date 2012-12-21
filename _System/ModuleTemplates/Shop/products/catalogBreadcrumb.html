@@ -1,0 +1,9 @@
+<nav class="steps">
+	<ul>
+	{% for crumb in crumbs -%}
+		{% if forloop.last == false and forloop.first == false -%}
+			<li class="enabled-step"><a href="{{crumb.url}}"><span class="step-label-smaller">All {{crumb.label}}</span><div class="rastersprite step-shadow"></div></a></li>
+		{% endif -%}
+	{% endfor -%}
+	</ul>
+</nav>

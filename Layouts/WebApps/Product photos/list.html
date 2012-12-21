@@ -1,0 +1,93 @@
+{% capture layout -%}{tag_layout}{% endcapture -%}
+{% capture description -%}{tag_description}{% endcapture -%}
+
+{% case layout -%}
+	{% when "widespread" -%}
+		<article class="widespread">
+			<div class="buy-position"></div>
+			<div class="vectorsprite twodots"></div>
+			<figure class="book-large"><img src="" data-src="{tag_image_value}?action=thumbnail&width=900&height=525&algorithm=fill" width="900" height="525" alt="{tag_heading}" /></figure>
+		</article>
+		
+	{% when "map" -%}
+		<article class="map">
+			<div class="buy-position"></div>
+			<figure class="book-large"><img src="" data-src="{tag_image_value}?action=thumbnail&width=900&height=525&algorithm=fill" width="900" height="525" alt="{tag_heading}" /></figure>
+			<div class="vectorsprite threedots"></div>
+			<section>
+				<img src="/i/world-map.png" alt="" />
+				<div class="countries">
+					<h2 class="content-title">{tag_heading}</h2>
+					{{description}}
+				</div>
+			</section>
+		</article>
+		
+	{% when "smallimages" -%}
+		<article class="smallimages">
+			<div class="buy-position"></div>
+			<figure class="book-small"><img src="" data-src="{tag_image_value}?action=thumbnail&width=585&height=341&algorithm=fill" width="585" height="341" alt="{tag_heading}" /></figure>
+			<figure class="book-small"><img src="" data-src="{tag_image 2_value}?action=thumbnail&width=585&height=341&algorithm=fill" width="585" height="341" alt="{tag_heading}" /></figure>
+		</article>
+		
+	{% when "testimonial" -%}
+		<article class="testimonial">
+			<figure>
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="145px" height="126px" viewBox="0 0 145 126" xml:space="preserve">
+				<polygon points="130.61,87.74 145,62.8 108.75,0 36.25,0 0,63 36.25,126 108.75,126 121.22,104 140,104 "/>
+				<radialGradient id="shine" cx="844.7666" cy="356.2168" r="79.1469" fx="815.5134" fy="338.3504" gradientTransform="matrix(0.0191 0.9998 1.0453 -0.02 -325.7471 -809.7579)" gradientUnits="userSpaceOnUse">
+					<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.6"/>
+					<stop  offset="0.1488" style="stop-color:#FFFFFF;stop-opacity:0.54"/>
+					<stop  offset="0.4475" style="stop-color:#FFFFFF;stop-opacity:0.42"/>
+					<stop  offset="0.4989" style="stop-color:#FFFFFF;stop-opacity:0.4"/>
+					<stop  offset="0.706" style="stop-color:#FFFFFF;stop-opacity:0.21"/>
+					<stop  offset="0.9458" style="stop-color:#FFFFFF;stop-opacity:0"/>
+				</radialGradient>
+				<polygon fill="url(#shine)" points="36.37,126 0,63 36.37,0 109.12,0 "/>
+				<g>
+					<defs>
+						<path id="photo" d="M100.53,14.07L128.78,63l-28.25,48.93h-56.5L15.78,63l28.25-48.93H100.53z"/>
+					</defs>
+					<clipPath id="clip">
+						<use xlink:href="#photo"  overflow="visible"/>
+					</clipPath>
+					<g clip-path="url(#clip)">
+						<image overflow="visible" width="158" height="137" xlink:href="{tag_image_value}?action=thumbnail&width=158&height=137&algorithm=fill_proportional"></image>
+					</g>
+				</g>
+				</svg>
+				<div class="vectorsprite quotemark"><div class="vectorsprite quotemark"></div></div>
+			</figure>
+			<section class="quote">{{description}}</section>
+			<section class="quotee"><h2>{tag_heading}</h2><p>{tag_subheading}</p><div class="vectorsprite quotemark"><div class="vectorsprite quotemark"></div></div></section>
+		</article>
+
+	{% when "image-text" -%}
+		<article class="image-text">
+			<div class="buy-position"></div>
+			<figure class="book-small"><img src="" data-src="{tag_image_value}?action=thumbnail&width=585&height=341&algorithm=fill" width="585" height="341" alt="{tag_heading}" /></figure>
+			<div class="vectorsprite onedot"></div>
+			<section>
+				<h2 class="content-title">{tag_heading}</h2>
+				{{description}}
+			</section>
+		</article>
+
+	{% when "text-image" -%}
+		<article class="text-image">
+			<div class="buy-position"></div>
+			<section>
+				<h2 class="content-title">{tag_heading}</h2>
+				{{description}}
+			</section>
+			<figure class="book-small"><img src="" data-src="{tag_image_value}?action=thumbnail&width=585&height=341&algorithm=fill" width="585" height="341" alt="{tag_heading}" /></figure>
+		</article>
+	
+	{% when "facebook-comments" -%}
+		<article class="facebook-comments scroll-pane">
+			<div class="fb-comments" data-href="http://{{site.host}}{{page.url}}" data-num-posts="100" data-width="520" data-colorscheme="dark"></div>
+		</article>
+		
+	{% else -%}
+		image type undefined: {{layout}}
+{% endcase -%}

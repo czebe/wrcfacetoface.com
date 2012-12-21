@@ -1,0 +1,38 @@
+{% section name="head" -%}
+<link rel="stylesheet" href="/css/products-main.css" type="text/css" media="screen" />{% endsection -%}
+<body class="products-main">
+	<div class="dust">
+		<ul>
+			<li class="composite-alpha infinite-bg-scroll" style="bottom: 100px;"><img data-src="/i/dust/dust-light-big_full.png" width="1800" height="573" /></li>
+			<li class="composite-alpha static" style="bottom: -80px;"><img data-src="/i/dust/dust-light-big_full.png" width="1800" height="573" /></li>
+			<li class="composite-alpha static" style="left: 45%; bottom: -60px;"><img data-src="/i/dust/dust-light_full.png" width="1110" height="506"></li>
+			<li class="composite-alpha animate-rotation-canvas" style="left: -5%;"><img data-src="/i/dust/dust-1_full.png" width="517" height="415" style="color: #96876f; background-color: #b7ae9e" /></li>
+			<li class="composite-alpha animate-rotation-canvas" style="left: 20%;"><img data-src="/i/dust/dust-2_full.png" width="517" height="415" style="color: #96876f; background-color: #b7ae9e" /></li>
+			<li class="composite-alpha animate-rotation-canvas" style="left: 40%;"><img data-src="/i/dust/dust-3_full.png" width="517" height="415" style="color: #96876f; background-color: #b7ae9e" /></li>
+			<li class="composite-alpha animate-rotation-canvas" style="left: 70%;"><img data-src="/i/dust/dust-2_full.png" width="517" height="415" style="color: #96876f; background-color: #b7ae9e" /></li>
+		</ul>
+	</div>
+	<nav class="arrow-navigation">
+		<a href="#" class="prev animate-slide"><span class="shadow animate-opacity"></span><span class="vectorsprite arrow-left">Previous</span></a>
+		<a href="#" class="next animate-slide"><span class="shadow animate-opacity"></span><span class="vectorsprite arrow-right">Next</span></a>
+	</nav>
+	<div class="page">
+		<div id="catalogs" class="animate-slide">
+			{% for cat in catalogs -%}
+				{module_catalog catalogId="{{cat.id}}" template="/_System/ModuleTemplates/Shop/products/catalog.html"}
+			{% endfor -%}
+		</div>
+	</div>
+	<!-- CATALOG BREADCRUMB -->
+	<nav class="steps">
+		<ul>
+			{% for cat in catalogs -%}
+				{module_catalogbreadcrumb catalogId="{{cat.id}}" template="/_System/ModuleTemplates/Shop/products/catalogBreadcrumbCatalogList.html"}
+			{% endfor -%}
+		</ul>
+	</nav>
+	<script>
+		var scriptsQueue = scriptsQueue || new Array();
+		scriptsQueue.push('/js/products-main.js');
+	</script>
+</body>

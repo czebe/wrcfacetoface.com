@@ -1,0 +1,8 @@
+{% for product in products -%}
+	{% if forloop.last == true -%}
+	<li class="active">
+	{% else -%}
+	<li>
+	{% endif -%}
+{module_product productId="{{product.Id}}" catalogId="{{product.catalogId}}" template="/_System/ModuleTemplates/Shop/products/productSmall.html"}</li>
+{% endfor -%}

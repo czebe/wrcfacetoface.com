@@ -1,0 +1,32 @@
+<div class="page">
+	<aside>
+		<h1>Shop<span class="rastersprite cartbasket"></span></h1>
+		<h2>Browse through our complete list of products. If you need more than one copies, quantities will be adjustible in your cart.</h2>
+		<hr />
+		{module_shoppingcartsummary template="/_System/ModuleTemplates/Shop/shop/cartSummary.html"}		
+		<div id="cart-contents"></div>	
+	</aside>
+	<article>
+		<section id="products-container">
+			{% for cat in catalogs -%}
+				{module_catalog catalogId="{{cat.id}}" template="/_System/ModuleTemplates/Shop/shop/catalog.html"}
+			{% endfor -%}
+		</section>
+	</article>
+</div>
+<!-- CATALOG BREADCRUMB -->
+<nav class="steps">
+	<ul>
+		<li><a href="#/all-products"><span>All</span><div class="rastersprite step-shadow"></div></a></li>
+		{% for cat in catalogs -%}
+			{module_catalogbreadcrumb catalogId="{{cat.id}}" template="/_System/ModuleTemplates/Shop/shop/catalogBreadcrumb.html"}
+		{% endfor -%}
+	</ul>
+</nav>
+<script>
+	var scriptsQueue = scriptsQueue || new Array();
+	scriptsQueue.push('/js/jquery/jquery.jscrollpane.js');
+	scriptsQueue.push('/js/jquery/jquery.mousewheel.js');
+	scriptsQueue.push('/js/shop.js');
+</script>
+

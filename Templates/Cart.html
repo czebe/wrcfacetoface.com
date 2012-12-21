@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+
+                    ████
+                  ██    ██
+            ████  ██    ██  ████            CarnationGroup - A part of POSSIBLE
+          ██    ████    ████    ██          #digitalcreativecurious
+          ██      ██    ██      ██
+            ██                ██            that's who we are. talk to us, show us your code or in fact fool around with ours.
+        ████████            ████████        you can get in touch with us through our site.
+      ██                            ██      try to impress us and maybe you will get some extra points :)
+      ██                            ██
+        ████████            ████████
+            ██                ██
+          ██      ██    ██      ██
+          ██    ████    ████    ██          http://www.carnationgroup.com
+            ████  ██    ██  ████
+                  ██    ██
+                    ████
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="keywords" content="WRC, World Rally Championship, WRC Face to Face, Richard Balint, rally, cars, drivers, co-drivers, official, photographer, album, book, photo, photography">
+	<meta name="description" content="WRC Face to Face">
+	<meta name="author" content="Richard Balint">
+
+	<meta property="og:title" content="WRC Face to Face"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://www.wrcfacetoface.com"/>
+	<meta property="og:image" content="http://{module_sitehost}/i/products/wrc2012/wrc_2012_cover_full.png"/>
+	<meta property="og:site_name" content="WRC Face to Face"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="icon" type="image/png" href="/favicon.png"/>
+	<link rel="apple-touch-icon" href="/i/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="/css/site.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/css/cart-styles.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="/js/messages_en.js"></script>
+	<title></title>
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-35510538-1']);
+		_gaq.push(['_setDomainName', '{module_sitehost}']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
+	</script>
+</head>
+<body>
+	<!-- HEADER -->
+	{module_menu, version="2", menuId="1367475", moduleTemplateGroup="Mainmenu"}
+	
+	<!-- PAGE CONTENT --> 
+	{tag_pagecontent}
+
+	<!-- FOOTER -->
+	{module_contentholder, name="Footer"}
+	
+	<!-- SCRIPTS -->
+	<script>
+		var scriptsQueue = scriptsQueue || new Array();
+		scriptsQueue.push('/CatalystScripts/ValidationFunctions.js');
+		
+		//CHECK IF CART IS EMPTY
+		if (document.getElementsByClassName('page').length == 0 && document.getElementsByClassName('cartLink').length == 1) {
+			document.getElementsByClassName('cartLink').item(0).innerHTML = Oshoplang.CartEmptyFormatted
+			document.getElementsByClassName('cartLink').item(0).setAttribute("href", "/products");
+		}
+	</script>
+	{module_contentholder, name="Scripts"}
+
+	<!-- PRELOAD LAYER -->
+	{module_contentholder, name="Preload"}
+	
+</body>
+</html>

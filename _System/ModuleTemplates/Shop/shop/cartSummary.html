@@ -1,0 +1,14 @@
+<div id="cartsummary">
+	<div class="totals">
+		<p>Items in cart: <strong>{{cart.totalItems}}</strong></p>
+		<p>Order total: <strong class="formatted-price">{{cart.totalAmount}}</strong></p>
+	</div>	
+	{% if cart.totalItems != 0 -%}
+		<a href="{{cart.viewCartUrl}}">
+			<nav>
+				<span>View cart</span>
+				<div class="vectorsprite prev-next-shine"></div>
+			</nav>
+		</a>
+	{% endif -%}
+</div>

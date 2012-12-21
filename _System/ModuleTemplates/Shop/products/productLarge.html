@@ -1,0 +1,104 @@
+{% section name="head" -%}
+<link rel="stylesheet" href="/css/products.css" type="text/css" media="screen" />
+<meta property="og:title" content="{tag_name_nolink}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://{{site.host}}{{page.url}}"/>
+<meta property="og:image" content="http://{{site.host}}{tag_largeimage_path}"/>
+<meta property="og:site_name" content="WRC Face to Face"/>
+{% endsection -%}
+<body class="product">
+	<div class="page">
+		<div class="dust animate-slide">
+			<ul>
+				<li class="composite-alpha static" style="bottom: 60px; width: 1805px; height: 575px;"><img data-src="/i/dust/dust-dark-big_full.png" width="1805" height="575" style="color: #1b1b1b;"></li>
+			</ul>
+			<ul class="rocks animate-slide">
+				<li class="composite-alpha static" style="left: 35%; bottom: 90px; width: 849px; height: 435px;"><img data-src="/i/dust/dust-rocks_full.png" width="849" height="435" /></li>
+				<li class="composite-alpha static" style="left: 60%; bottom: 70px; width: 566px; height: 290px; opacity: 0.5;"><img data-src="/i/dust/dust-rocks_full.png" width="849" height="435"></li>
+				<li class="composite-alpha static" style="left: 80%; bottom: 60px; width: 849px; height: 435px;"><img data-src="/i/dust/dust-rocks_full.png" width="849" height="435"></li>
+			</ul>
+		</div>
+		<nav class="arrow-navigation">
+			<a href="#" class="prev animate-slide"><span class="shadow animate-opacity"></span><span class="vectorsprite arrow-left">Previous</span></a>
+			<a href="#/details-1" class="next animate-slide"><span class="shadow animate-opacity"></span><span class="vectorsprite arrow-right">Next</span></a>
+		</nav>
+		<div id="buy" class="animate-opacity">
+			<div class="small-dot"><div class="circle"></div></div>
+			<div class="buy-button">
+				<div class="bg animate-scale"></div>
+				<div class="face"></div>
+				<a onClick="AddToCart({{product.catalogId}},{tag_productid},'',3,true);return false;"><div class="label">Buy</div></a>
+				<div class="price animate-opacity"><span class="amount formatted-price">{tag_retailprice}</span><span class="smallprint">plus shipping</span></div>
+				<div class="vectorsprite smalldot-shine"></div>
+			</div>
+			<div class="rubber-band"><svg id="rubber-band-SVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 30" preserveAspectRatio="none" xml:space="preserve" width="100%" height="100%"><line id="rubber-line" vector-effect="non-scaling-stroke" fill="none" stroke="#8DC72D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="0" y1="30" x2="22" y2="0"/></svg></div>
+		</div>
+		<div id="product-container" class="animate-slide {tag_custom1}">
+			<article class="overview">
+				<div class="product-details">
+					<div class="buy-position"></div>
+					<figure class="vectorsprite largedot">
+						<div class="cover-photo"><img data-src="{tag_largeimage_path}" width="340" height="315" alt="{tag_name_nolink}" /></div>
+					</figure>
+					<section>
+						<h1>{tag_name_nolink}</h1>
+						{tag_description}
+					</section>
+					<aside class="cf">
+						<ul>
+							<li><div class="fb-like" data-href="http://{{site.host}}{{page.url}}" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" colorscheme="light"></div></li>
+							<li><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://{{site.host}}{{page.url}}" data-count="none" data-text="" data-via="" data-related="" data-lang="en" data-counturl="">Tweet</a></li>
+						</ul>
+					</aside>
+				</div>
+			</article>
+			{% comment -%}
+				FOLLOWING BLOCK IS FOR CHOOSING THE CORRECT WEB APP FOR A GIVEN PRODUCT.
+				APPLIES TO PRODUCTS IN 'BOOK' CATALOG ONLY
+				DEFINE THE CLASSIFICATION CATEGORY FOR EACH YEAR IN THE CASE BLOCK BY INSERTING A DUMMY WEBAPP MODULE TAG FILTERED TO A SPECIFIC CATEGORY
+			{% endcomment -%}
+			
+			{% capture year -%}{{product.releasedate | date: "%y"}}{% endcapture -%}
+			{% capture booktype -%}{{product.name | split:' ' | first | downcase}}{% endcapture -%}
+			{% if product.catalogId == "30778" -%}
+				<!-- CUSTOM BOOK CONTENT -->
+				{% assign index = 1 -%}
+				{% case booktype -%}
+					{% when 'wrc' -%} 
+						{% case year -%}
+							{% when 09 %} 
+								{% assign category = '69059' -%}
+							{% when 10 %} 
+								{% assign category = '69060' -%}
+							{% when 11 %} 
+								{% assign category = '74459' -%}
+							{% when 12 %} 
+								{% assign category = '74464' -%}
+							{% when 13 %} 
+								{% assign category = '74465' -%}
+															
+							{% else -%}
+								unknown release date for WRC book: {{year}}
+						{% endcase -%}
+					{% when 'mundial' -%}
+						{% case year -%}
+							{% when 10 -%} 
+								{% assign category = '74466' -%}
+								
+							{% else -%}
+								unknown release date for Mundial book: {{year}}
+						{% endcase -%}
+					{% endcase -%}
+				{module_webapps,17876,c,{{category}},,,,20,,1,alphabetical}
+			{% endif -%}
+		</div>
+	</div>
+	<script>
+		var scriptsQueue = scriptsQueue || new Array();
+		scriptsQueue.push('/js/jquery/jquery.jscrollpane.js');
+		scriptsQueue.push('/js/jquery/jquery.mousewheel.js');
+		scriptsQueue.push('/js/libs/PxLoader.js');
+		scriptsQueue.push('/js/libs/PxLoaderImage.js');
+		scriptsQueue.push('/js/products.js');
+	</script>
+</body>

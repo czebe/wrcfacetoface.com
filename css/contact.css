@@ -1,0 +1,132 @@
+/* ############################################################################################ */
+/* CONTACT PAGE */
+/* ############################################################################################ */
+body.contact .page {
+  background: url(/i/dither.png) repeat 50% 50% transparent; }
+  body.contact .page > article {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -185px auto 0 -365px;
+    width: 730px;
+    height: 370px; }
+    body.contact .page > article > svg {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      z-index: -1; }
+body.contact > footer .floor {
+  background: url(/i/floor-dark.png) 50% repeat-x;
+  height: 149px; }
+body.contact article hgroup {
+  margin-left: 330px; }
+  body.contact article hgroup h1 {
+    font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: normal;
+    color: #FFF;
+    margin-bottom: 6px; }
+  body.contact article hgroup h2 {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    color: gray;
+    color: #FFF; }
+body.contact article a {
+  display: block;
+  position: absolute;
+  color: gray;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 16px;
+  white-space: nowrap; }
+  body.contact article a:hover {
+    color: #8fc730; }
+    body.contact article a:hover figure {
+      background-color: #8fc730; }
+      body.contact article a:hover figure:before {
+        border-right-color: #8fc730; }
+      body.contact article a:hover figure:after {
+        border-left-color: #8fc730; }
+  body.contact article a.address {
+    left: 460px;
+    top: 92px; }
+  body.contact article a.phone {
+    left: 605px;
+    top: 174px; }
+  body.contact article a.email {
+    left: 460px;
+    top: 256px; }
+  body.contact article a > p {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-left: 30px; }
+body.contact figure {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 60px;
+  width: 35px;
+  height: 60px; }
+  body.contact figure:before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    margin-left: -17px;
+    border-style: solid;
+    border-width: 30px 17px 30px 0;
+    border-color: transparent transparent transparent transparent; }
+  body.contact figure:after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    margin-left: 35px;
+    border-style: solid;
+    border-width: 30px 0 30px 17px;
+    border-color: transparent transparent transparent transparent; }
+  body.contact figure span {
+    display: inline-block;
+    vertical-align: middle; }
+
+/* ############################################################################################ */
+/* DUST */
+/* ############################################################################################ */
+.dust {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -2;
+  opacity: .75; }
+  .dust ul, .dust li {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+
+.composite-alpha img {
+  display: none; }
+
+/* ############################################################################################ */
+/* PAGE DECORATIONS */
+/* ############################################################################################ */
+.car {
+  position: absolute;
+  left: 0;
+  bottom: 25px; }
+
+.form-bg-container {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  z-index: -1; }

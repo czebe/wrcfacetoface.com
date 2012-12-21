@@ -1,0 +1,568 @@
+/* ############################################################################################ */
+/* PRODUCT PAGE */
+/* ############################################################################################ */
+body.product .page {
+  background: url(/i/dither.png) repeat 50% 50% transparent; }
+body.product .arrow-navigation {
+  display: none; }
+body.product > footer .floor {
+  background: url(/i/floor-dark.png) 50% repeat-x;
+  height: 149px; }
+
+#product-container {
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  color: #FFF;
+  white-space: nowrap;
+  margin-left: -455px;
+  z-index: 5; }
+  #product-container > article {
+    display: inline-block;
+    position: relative;
+    margin-left: 25px;
+    margin-right: 25px;
+    white-space: normal;
+    vertical-align: middle; }
+
+.buy-position {
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  visibility: hidden;
+  background-color: red; }
+
+/* ############################################################################################ */
+/* PRODUCT OVERVIEW */
+/* ############################################################################################ */
+article.overview {
+  width: 860px;
+  height: 100%;
+  vertical-align: top !important;
+  /* PRODUCT DESCRIPTION */
+  /* PRODUCT SOCIAL LINKS SIDEBAR*/ }
+  article.overview .buy-position {
+    right: 117px;
+    top: 35px; }
+  article.overview .product-details {
+    position: absolute;
+    top: 50%;
+    margin-top: -260px; }
+  article.overview figure {
+    margin-top: 35px;
+    position: relative;
+    float: left; }
+    article.overview figure .cover-photo {
+      width: 340px;
+      height: 315px;
+      top: 50%;
+      display: block;
+      position: relative;
+      vertical-align: middle;
+      margin: -157px auto 0 auto;
+      -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) 5px 15px 10px 2px;
+      -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) 5px 15px 10px 2px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) 5px 15px 10px 2px; }
+      article.overview figure .cover-photo img, article.overview figure .cover-photo canvas {
+        width: 100%;
+        height: 100%; }
+  article.overview section {
+    position: relative;
+    float: left;
+    width: 290px;
+    margin-left: 20px;
+    padding-right: 20px; }
+    article.overview section > h1 {
+      font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 28px;
+      line-height: 32px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+      color: #FFF; }
+    article.overview section > p {
+      display: block;
+      min-height: 220px;
+      padding-bottom: 20px;
+      font-size: 14px;
+      line-height: 1.25em;
+      margin-top: 2em; }
+    article.overview section dl {
+      display: block;
+      position: relative;
+      font-size: 12px;
+      line-height: 1.25em;
+      margin-top: 10px; }
+      article.overview section dl:before {
+        content: '';
+        margin-bottom: 10px;
+        display: block; }
+    article.overview section dt {
+      clear: left;
+      float: left; }
+    article.overview section dd {
+      float: left;
+      margin-left: 0.5em; }
+  article.overview aside {
+    width: 100px;
+    position: relative;
+    margin-top: 85px;
+    float: right; }
+    article.overview aside li {
+      font-size: 0;
+      color: rgba(0, 0, 0, 0);
+      margin-bottom: 10px; }
+
+#product-container.calendar .cover-photo {
+  width: 408px;
+  height: 378px;
+  top: 50%;
+  margin: -226px auto 0 auto;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* ############################################################################################ */
+/* WIDESPREAD */
+/* ############################################################################################ */
+article.widespread .buy-position {
+  right: 240px;
+  top: 0px; }
+article.widespread .twodots {
+  position: relative;
+  left: 50%;
+  margin-left: -400px;
+  margin-bottom: -10px; }
+
+/* ############################################################################################ */
+/* MAP */
+/* ############################################################################################ */
+article.map .buy-position {
+  right: 185px;
+  top: 35px; }
+article.map section {
+  position: relative;
+  left: 41%;
+  margin-top: -50px; }
+  article.map section img {
+    margin-right: 10px;
+    float: left; }
+  article.map section .countries {
+    position: relative;
+    float: left;
+    width: 250px;
+    margin-top: 10px; }
+article.map .threedots {
+  position: relative;
+  left: 50%;
+  margin-left: -390px;
+  margin-top: -113px; }
+
+#product-container.mundial article.map > section {
+  left: 20%; }
+  #product-container.mundial article.map > section .countries {
+    width: 530px; }
+
+/* ############################################################################################ */
+/* IMAGE / TEXT */
+/* ############################################################################################ */
+article.image-text {
+  margin-top: -70px; }
+  article.image-text .buy-position {
+    left: 400px;
+    top: -30px; }
+  article.image-text section {
+    width: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -260px;
+    color: gray;
+    font-size: 12.5px;
+    line-height: 16px; }
+  article.image-text .onedot {
+    position: relative;
+    left: 50%;
+    margin-left: 255px;
+    margin-top: -70px; }
+
+/* ############################################################################################ */
+/* TEXT / IMAGE */
+/* ############################################################################################ */
+article.text-image {
+  margin-top: 70px; }
+  article.text-image .buy-position {
+    right: 160px;
+    top: 30px; }
+  article.text-image section {
+    width: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -260px;
+    color: gray;
+    font-size: 12.5px;
+    line-height: 16px; }
+
+/* ############################################################################################ */
+/* SMALLIMAGES
+/* ############################################################################################ */
+article.smallimages .buy-position {
+  right: 127px;
+  top: 50px; }
+article.smallimages .book-small:last-child {
+  margin-top: -55px; }
+
+/* ############################################################################################ */
+/* TESTIMONIAL
+/* ############################################################################################ */
+article.testimonial {
+  width: 310px;
+  height: 370px;
+  /* TODO: ADD BG */
+  background-repeat: no-repeat;
+  background-position: top; }
+  article.testimonial figure {
+    width: 142px;
+    margin: 30px auto 0 auto; }
+    article.testimonial figure > .quotemark {
+      position: absolute;
+      top: 118px;
+      right: 33px; }
+  article.testimonial .quotemark > .quotemark {
+    margin-left: 18px; }
+  article.testimonial section.quotee {
+    position: relative;
+    width: 80%;
+    margin: 0 auto 0 auto; }
+    article.testimonial section.quotee > .quotemark {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -10px; }
+    article.testimonial section.quotee h2 {
+      font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 19px;
+      line-height: 32px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+      color: #FFF;
+      margin-left: 45px;
+      margin-top: 20px; }
+  article.testimonial section.quote {
+    text-align: center;
+    font-style: italic;
+    line-height: 21px;
+    font-size: 14px;
+    margin: 15px auto 5px auto;
+    width: 80%;
+    height: auto; }
+  article.testimonial p {
+    font-weight: bold;
+    color: gray;
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-left: 45px; }
+
+/* ############################################################################################ */
+/* FACEBOOK COMMENTS */
+/* ############################################################################################ */
+article.facebook-comments {
+  top: 0 !important;
+  width: 560px;
+  height: 100%;
+  background: #333;
+  padding-top: 65px;
+  padding-bottom: 140px;
+  border-left: 20px solid black;
+  border-right: 20px solid black;
+  overflow-y: auto; }
+  article.facebook-comments > div {
+    display: block !important;
+    width: 540px;
+    height: 100%;
+    margin: 0 auto; }
+  article.facebook-comments .jspContainer {
+    margin-left: 10px !important;
+    box-sizing: border-box; }
+  article.facebook-comments .jspTrack {
+    background: #333 !important; }
+  article.facebook-comments .jspDrag {
+    background-color: transparent; }
+  article.facebook-comments .jspVerticalBar {
+    width: 24px;
+    margin-right: 10px; }
+  article.facebook-comments .jspCap {
+    height: 65px;
+    background: #333;
+    display: block; }
+
+/* ############################################################################################ */
+/* BUY BUTTON
+/* ############################################################################################ */
+#buy {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  z-index: 500;
+  /* BUTTON */
+  /* SMALL DOT */
+  /* RUBBER BAND */ }
+  #buy .buy-button {
+    display: block;
+    position: absolute;
+    overflow: visible !important;
+    left: 17px;
+    top: -91px;
+    width: 40px;
+    height: 70px;
+    background-color: #000;
+    /* PRICE LABEL */ }
+    #buy .buy-button .bg {
+      display: block;
+      position: absolute;
+      background-color: #000;
+      width: 40px;
+      height: 70px; }
+      #buy .buy-button .bg:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        margin-left: -20px;
+        border-style: solid;
+        border-width: 35px 20px 35px 0;
+        border-color: transparent black transparent transparent; }
+      #buy .buy-button .bg:after {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        margin-left: 40px;
+        border-style: solid;
+        border-width: 35px 0 35px 20px;
+        border-color: transparent transparent transparent black;
+        left: inherit;
+        right: 0;
+        margin-left: 0;
+        margin-right: -20px; }
+    #buy .buy-button .face {
+      display: block;
+      position: absolute;
+      top: 9px;
+      left: 4px;
+      width: 32px;
+      height: 52px;
+      background-color: #8FC730;
+      z-index: 5; }
+      #buy .buy-button .face:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        margin-left: -15px;
+        border-style: solid;
+        border-width: 26px 15px 26px 0;
+        border-color: transparent #8fc730 transparent transparent; }
+      #buy .buy-button .face:after {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        margin-left: 32px;
+        border-style: solid;
+        border-width: 26px 0 26px 15px;
+        border-color: transparent transparent transparent #8fc730; }
+    #buy .buy-button .smalldot-shine {
+      display: block;
+      position: absolute;
+      margin-left: -20px;
+      z-index: 6; }
+    #buy .buy-button a {
+      display: block;
+      position: absolute;
+      text-decoration: none;
+      z-index: 7;
+      margin-left: -20px;
+      width: 80px;
+      height: 70px; }
+      #buy .buy-button a .label {
+        display: block;
+        position: absolute;
+        font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: normal;
+        color: #FFF;
+        color: black;
+        background-color: transparent;
+        width: 81px;
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 25px; }
+    #buy .buy-button .price {
+      display: block;
+      position: absolute;
+      opacity: 0;
+      width: 140px;
+      top: 13px;
+      left: 68px; }
+      #buy .buy-button .price .amount {
+        font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: normal;
+        color: #FFF; }
+      #buy .buy-button .price .smallprint {
+        display: block;
+        font-size: 12px;
+        color: #FFF;
+        opacity: 0.5; }
+  #buy .small-dot {
+    position: absolute;
+    width: 14px;
+    height: 22px;
+    top: -11px;
+    left: -7px;
+    background-color: rgba(0, 0, 0, 0.15); }
+    #buy .small-dot:before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      margin-left: -6px;
+      border-style: solid;
+      border-width: 11px 6px 11px 0;
+      border-color: transparent rgba(0, 0, 0, 0.15) transparent transparent; }
+    #buy .small-dot:after {
+      display: block;
+      position: absolute;
+      content: "";
+      top: 0;
+      margin-left: 14px;
+      border-style: solid;
+      border-width: 11px 0 11px 6px;
+      border-color: transparent transparent transparent rgba(0, 0, 0, 0.15); }
+    #buy .small-dot .circle {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background-color: #8FC730;
+      margin: 0 auto;
+      top: 50%;
+      margin-top: -5px;
+      z-index: 3; }
+  #buy .rubber-band {
+    position: absolute;
+    width: 22px;
+    height: 30px;
+    top: -31px;
+    left: 0px; }
+
+#rubber-band-SVG {
+  position: absolute; }
+
+/* ############################################################################################ */
+/* DUST */
+/* ############################################################################################ */
+.dust {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4; }
+  .dust ul {
+    display: block;
+    position: absolute;
+    width: 1800px;
+    height: 100%; }
+  .dust .composite-alpha {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: 573px; }
+  .dust .static canvas {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+
+.composite-alpha img {
+  display: none; }
+
+/* ############################################################################################ */
+/* GENERIC STYLING, USED IN MULTIPLE PLACES WITHIN THE PAGE */
+/* ############################################################################################ */
+h2.content-title {
+  font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: normal;
+  color: #FFF;
+  margin-top: 25px;
+  margin-bottom: 5px; }
+
+.book-large {
+  width: 900px;
+  height: 525px;
+  margin-left: 30px; }
+
+.book-small {
+  width: 585px;
+  height: 341px;
+  margin-left: 25px; }
+
+.composite-alpha canvas {
+  display: block;
+  position: absolute; }
+.composite-alpha img {
+  display: none; }
+
+.book-small canvas,
+.book-large canvas {
+  width: 100%;
+  height: 100%;
+  position: relative !important; }
+
+article:not(.overview) ul,
+.slash-separated-list {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0; }
+
+article:not(.overview) li,
+.slash-separated-list li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: 12.5px;
+  line-height: 16px;
+  color: gray; }
+  article:not(.overview) li:after,
+  .slash-separated-list li:after {
+    content: "/";
+    margin: 0 6px 0 6px;
+    color: #8fc730; }
+  article:not(.overview) li:last-child:after,
+  .slash-separated-list li:last-child:after {
+    content: ""; }

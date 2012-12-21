@@ -1,0 +1,39 @@
+<div class="shop-catalogBrowsePanel">
+	<a href="{{catalog.url}}">{{catalog.name}} ({{catalog.products.size}})</a>
+
+	{% if catalog.onSale.totalProducts > 0 %}
+		<div class="shop-onSalePanel">
+			<a href="{{catalog.onSale.url}}">On Sale ({{catalog.onSale.totalProducts}})</a>
+		</div>
+	{% endif %}
+
+	{% if catalog.priceSlots.size > 0 %}
+		<div class="shop-priceSlotsPanel">
+			<div class="shop-priceSlotsPanelTitle">Price</div>
+			<div class="shop-priceSlotsPanelContent">
+				<ul class="shop-priceSlotsList">
+				{% for priceSlot in catalog.priceSlots%}
+				    <li>
+					<a href="{{priceSlot.url}}">{{priceSlot.fromPrice}} - {{priceSlot.toPrice}} ({{priceSlot.totalProducts}})</a>
+				    </li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+	{% endif %}
+
+	{% if catalog.catalogs.size > 0 %}
+		<div class="shop-subcatalogsPanel">
+			<div class="shop-subcatalogsPanelTitle">Sub Catalogs</div>
+			<div class="shop-subcatalogsPanelContent">
+				<ul class="shop-subcatalogsList">
+				{% for c in catalog.catalogs %}
+					<li>
+						<a href="{{c.url}}">{{c.name}} ({{c.products.size}})</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+	{% endif %}
+</div>

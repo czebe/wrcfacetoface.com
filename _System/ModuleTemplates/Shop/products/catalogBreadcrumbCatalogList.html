@@ -1,0 +1,5 @@
+{% for crumb in crumbs -%}
+	{% if forloop.first == false -%}
+		<li class="step-item inactive-step animated"><a href="#/{{crumb.label | downcase}}"><span class="leftarrow animated"></span><span class="step-label animated">{{crumb.label}}</span><span class="rightarrow animated"></span><div class="step-shadow"></div></a></li>
+	{% endif -%}
+{% endfor -%}

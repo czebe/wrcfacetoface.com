@@ -1,0 +1,22 @@
+<article data-code="{tag_productcode}">
+	<a class="thumbnail" href="{tag_itemurl_nolink}">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="178px" height="154px" viewBox="0 0 185 160">
+			<g>
+				<defs><polygon id="inside" points="127.82,139 57.18,139 24,79.5 57.18,20 127.82,20 161,79.5"></polygon></defs>
+				<clipPath id="clip"><use xlink:href="#inside" overflow="hidden"></use></clipPath>
+				<g class="thumbnail-image" clip-path="url(#clip)">
+					<image overflow="hidden" width="165" height="144" transform="translate(10 8)" xlink:href="{tag_largeimage_path}?action=thumbnail&width=165&height=144&algorithm=fill"></image>
+				</g>
+			</g>
+		</svg>
+		<div class="vectorsprite thumbnail-stroke"></div>
+	</a>
+	<h2>{tag_name_nolink}</h2>
+	<div class="unit-price">
+		<span>Unit price</span>
+		<p class="formatted-price">{tag_totalprice}</p>
+	</div>
+	<nav class="addtocart">
+		<a onClick="AddToCart({{product.catalogId}},{tag_productid},'',3,false);return false;"><span>Add to cart</span></a>
+	</nav>
+</article>

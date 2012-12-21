@@ -1,0 +1,57 @@
+<nav class="navigate-cart vectorsprite green-prev-next animate-slide">
+	{tag_buybutton,<span class="next-label animate-slide">Checkout</span><div class="vectorsprite prev-next-shine animate-slide"></div>,true}
+</nav>
+<div class="page cart">
+	<aside>
+		<h1>Your cart<span class="rastersprite cartbasket"></span></h1>
+		<h2>Delivery country &amp; shipping option</h2>
+		<div class="select">
+			<div class="vectorsprite input-bg">
+				<div class="dropdown-arrow vectorsprite select-arrow"></div>
+				<span class="text-holder"></span>
+			</div>
+			<div class="vectorsprite input-bg">
+				<div class="dropdown-arrow vectorsprite select-arrow"></div>
+				<span class="text-holder"></span>
+			</div>
+			<div class="multiple-dropdowns">
+				{tag_shippingoptions,true}
+			</div>
+		</div>
+		<h2>Discount code</h2>
+		<div class="vectorsprite input-bg">{tag_discountcode}</div>
+		<hr />
+		<div class="totals">
+			<p>Products total <strong class="formatted-price">{tag_productgrandtotal}</strong></p>
+			<p>Discount <strong class="formatted-price">{tag_invoicediscountamount}</strong></p>
+			<p>Shipping <strong class="formatted-price">{tag_shippingtotal}</strong></p>
+			<p>Order total <strong class="formatted-price">{tag_invoicetotal}</strong></p>
+		</div>
+	</aside>
+	<article>
+		<div id="products-container">
+			<div id="product-codes">{tag_productcode}</div>
+			<div id="remove-buttons">{tag_productremovelink}</div>
+			<div id="product-thumbnails">{tag_productimage}</div>
+			<div id="product-names">{tag_productname}</div>
+			<div id="unit-prices">{tag_productinctaxamount}</div>
+			<div id="product-quantities">{tag_productquantity}</div>
+			<div id="subtotals">{tag_producttotal}</div>
+		</div>
+	</article>
+</div>
+<nav class="steps">
+	<ul>
+		<li><a><span>Cart</span><div class="rastersprite step-shadow"></div></a></li>
+		<li class="inactive-step"><a><span>Shipping</span><div class="rastersprite step-shadow"></div></a></li>
+		<li class="inactive-step disabled-step"><a><span>Billing</span><div class="rastersprite step-shadow"></div></a></li>
+		<li class="inactive-step disabled-step"><a><span>Payment</span><div class="rastersprite step-shadow"></div></a></li>
+		<li class="inactive-step disabled-step"><a><span>Receipt</span><div class="rastersprite step-shadow"></div></a></li>
+	</ul>
+</nav>
+<script>
+	var scriptsQueue = scriptsQueue || new Array();
+	scriptsQueue.push('/js/jquery/jquery.jscrollpane.js');
+	scriptsQueue.push('/js/jquery/jquery.mousewheel.js');
+	scriptsQueue.push('/js/cart.js');
+</script>

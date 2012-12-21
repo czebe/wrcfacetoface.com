@@ -1,0 +1,13 @@
+<nav id="cartsummary" class="vectorsprite cartsummary">
+	{% if cart.totalItems != 0 -%}
+		<a href="{{cart.viewCartUrl}}">
+			<h2>View cart</h2>
+			<span class="rastersprite cartsummary-basket"></span>
+			<output>Total:<span class="formatted-price">{{cart.totalAmount}}</span></output>
+		</a>
+	{% else -%}
+		<h2>View cart</h2>
+		<span class="rastersprite cartsummary-basket"></span>
+		<output>no items</output>
+	{% endif -%}
+</nav>

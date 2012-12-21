@@ -1,0 +1,5 @@
+{% for product in products -%}
+	<li>{module_product productId="{{product.Id}}" catalogId="{{product.catalogId}}" template="/_System/ModuleTemplates/Shop/shop/productSmall.html"}</li>
+{% endfor -%}
+
+

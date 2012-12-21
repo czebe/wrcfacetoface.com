@@ -1,0 +1,86 @@
+/* ############################################################################################ */
+/* DOWNLOADS PAGE */
+/* ############################################################################################ */
+body.downloads .steps {
+  height: 30px; }
+body.downloads .page {
+  background: url(/i/dither.png) repeat 50% 50% transparent; }
+  body.downloads .page svg {
+    display: block;
+    position: absolute; }
+body.downloads article {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  body.downloads article > ul {
+    display: none; }
+  body.downloads article .thumbnails {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  body.downloads article > figure {
+    display: none; }
+  body.downloads article section figure {
+    display: block;
+    position: absolute; }
+    body.downloads article section figure .downloads-thumbnail-stroke {
+      visibility: hidden;
+      top: 6px;
+      left: 7px; }
+    body.downloads article section figure .eye-icon {
+      position: absolute;
+      top: 37px;
+      left: 37px;
+      display: none; }
+    body.downloads article section figure svg, body.downloads article section figure div {
+      display: block;
+      position: absolute; }
+    body.downloads article section figure svg {
+      width: 93px;
+      height: 80px; }
+    body.downloads article section figure svg {
+      top: 6px;
+      left: 6px; }
+    body.downloads article section figure:hover .downloads-thumbnail-stroke {
+      visibility: visible; }
+    body.downloads article section figure.active {
+      z-index: 2000; }
+      body.downloads article section figure.active .eye-icon {
+        display: block; }
+
+#fullscreen-wallpaper {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: 1999; }
+
+/* ############################################################################################ */
+/* DUST */
+/* ############################################################################################ */
+.dust {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -2;
+  opacity: .75; }
+  .dust ul, .dust li {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute; }
+
+.composite-alpha img {
+  display: none; }
+
+/* ############################################################################################ */
+/* PAGE DECORATIONS */
+/* ############################################################################################ */

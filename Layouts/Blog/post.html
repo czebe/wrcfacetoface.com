@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title></title>
+<link href="/StyleSheets/ModuleStyleSheets.css" type="text/css" rel="StyleSheet" />
+<link type="text/css" media="screen,projection" href="/StyleSheets/base.css" rel="stylesheet" />
+<link type="text/css" media="screen,projection" href="/StyleSheets/screen.css" rel="stylesheet" />
+<link rel="stylesheet" href="/CatalystStyles/Box.css" type="text/css" media="screen" />
+<meta content="text/html;charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+
+<div class="entry">
+<h2><strong> {tag_blogposttitle_nolink}</strong> </h2>
+<div class="post_meta">
+<p>{tag_blogpostdate} . posted by <strong> {tag_blogpostauthor} </strong> | <a href="{tag_permalinkonly}#comments">Comments ({tag_commentcount})</a></p>
+</div>
+<div class="social">
+{module_facebooklike, url="{tag_itemurl_withhost}", width="100", showFaces="false"}
+{module_twittertweet, url="{tag_itemurl_withhost}"}
+</div>
+<div class="post-body"> {tag_blogpostbody}</div>
+</div>
+<!-- BEGIN #comments -->
+<a name="comments"></a>
+<div class="entry" id="comments">
+<h2 class="heading border_bottom">{tag_commentcount} Comment(s)</h2>
+{tag_commentspaged}
+</div>
+<div class="entry" id="form">
+<h2 class="heading border_bottom">Leave a reply</h2>
+<form onsubmit="return checkWholeForm(this)" action="/RatingProcess.aspx?OID={tag_blogpostid}&amp;OTYPE={tag_blogposttype}" method="post">
+    <fieldset>
+    <input maxlength="255" name="fullname" class="cat_textbox_small" /><label> Name <span>optional</span></label>
+    <input maxlength="255" name="website" class="cat_textbox_small" /><label> Website <span>optional</span></label>
+    <input maxlength="255" name="emailaddress" class="cat_textbox_small" /><label> Email Address <span>optional</span></label>
+    <div style="float: right;">{module_captchav2}</div>
+    <label> Verification code</label>
+    </fieldset>
+    <fieldset>
+    <textarea name="Feedback" class="cat_listbox_small"></textarea><label> Your comment</label>
+    </fieldset>
+    <div>
+    <input class="light_button_send" name="submit_comment" type="submit" id="submit_comment" tabindex="5" value="Post a comment" />
+    </div>
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+      function checkWholeForm(theForm) {
+        var why = "";
+        if (theForm.EmailAddress) if (theForm.EmailAddress.value.length > 0) why += checkEmail(theForm.EmailAddress.value);
+        if (theForm.CaptchaV2) why += isEmpty(theForm.CaptchaV2.value, "Enter Word Verification in box below");
+        if (why != "") { alert(why); return false; }
+        return true;
+      }
+      //]]>
+      </script>
+</form>
+</div>
+<!-- END #comments -->
+<!-- END .blog-post -->
+
+
+
+</body>

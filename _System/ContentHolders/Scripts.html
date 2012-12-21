@@ -1,0 +1,43 @@
+<script>
+	var siteHost = 'http://{module_sitehost}';
+	var facebookAppId = '451376674915199';
+	var visitorCountryCode = '{module_visitorcountrycode}';
+	var scriptsQueue = scriptsQueue || new Array();
+	
+	scriptsQueue.unshift(
+		'//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+		'/js/jquery/jquery.address-1.5.min.js',
+		'/js/jquery/jquery.cookie.js',
+		'/js/jquery/plugins.js',
+		'/js/site.js'
+	);
+	
+	function loadScripts() {
+		LazyLoad.js(scriptsQueue, function () {
+			var WRC = window.WRC || {};
+			WRC.siteController = new WRC.SiteController();
+			WRC.siteController.init();
+		});
+	}
+	
+	function asyncLoad(){
+		var s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.async = true;
+		s.src = '/js/libs/lazyload-min.js';
+		s.onload = loadScripts;
+		var x = document.getElementsByTagName('script')[0];
+		x.parentNode.insertBefore(s, x);
+	}
+	
+	if (document.attachEvent) {
+		document.attachEvent('onreadystatechange', function(){
+			if ( document.readyState === "complete" ) {
+            	document.detachEvent("onreadystatechange", arguments.callee);
+                asyncLoad();
+			}
+		});
+	} else {
+		document.addEventListener('DOMContentLoaded', asyncLoad, false);
+	}	
+</script>

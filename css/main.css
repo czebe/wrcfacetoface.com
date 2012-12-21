@@ -1,0 +1,400 @@
+/* ############################################################################################ */
+/* RACE LOCATIONS */
+/* ############################################################################################ */
+#races-info {
+  display: none; }
+
+#race-locations {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 83px; }
+  #race-locations hr {
+    display: block;
+    width: 100%;
+    margin-bottom: 1px;
+    -webkit-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
+    -ms-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1); }
+    #race-locations hr.thick {
+      height: 11px;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABVAAAAABAQMAAAACWhf+AAAABlBMVEWNxy2Nxy0mrWjOAAAAAnRSTlMAM8lDrC4AAAAUSURBVHheY/iPC/xjoC+w/08AAAAGODoF8gfQFQAAAABJRU5ErkJggg=="); }
+    #race-locations hr.thick-wide {
+      height: 11px;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABVAAAAABAQMAAAACWhf+AAAABlBMVEX///+Nxy19S0ZRAAAAAnRSTlMAM8lDrC4AAAATSURBVHheY/hPPvjAQDNgj8U6AItZTuKJwNkvAAAAAElFTkSuQmCC"); }
+    #race-locations hr.fixed {
+      height: 6px;
+      background-color: #8dc72d;
+      opacity: .5; }
+    #race-locations hr.thin {
+      height: 6px;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABVAAAAABAQMAAAACWhf+AAAABlBMVEX///+Nxy19S0ZRAAAAAnRSTlMAgJsrThgAAAASSURBVHheY/gPBwy0APb/qQYAUNFT7PZm8poAAAAASUVORK5CYII="); }
+  #race-locations ul {
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+    padding-left: 175px;
+    display: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    #race-locations ul:first-of-type {
+      display: block; }
+  #race-locations li {
+    float: left;
+    margin: 0 6px; }
+    #race-locations li.active a {
+      color: #8fc730; }
+  #race-locations a {
+    font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: normal;
+    color: #FFF;
+    color: #4C4C4C; }
+    #race-locations a:hover {
+      color: #8fc730; }
+
+/* ############################################################################################ */
+/* SEASON NAVIGATION */
+/* ############################################################################################ */
+#race-seasons {
+  display: block;
+  position: absolute;
+  bottom: 113px;
+  height: auto;
+  min-height: 22px;
+  max-height: 22px;
+  overflow: hidden; }
+  #race-seasons:hover {
+    height: auto;
+    max-height: 600px; }
+    #race-seasons:hover ul {
+      top: 0 !important; }
+  #race-seasons ul {
+    position: relative;
+    list-style: none; }
+  #race-seasons li {
+    display: block;
+    margin-top: 1px; }
+    #race-seasons li:not(.active) a:hover {
+      background-color: #8fc730; }
+    #race-seasons li.active a {
+      background-color: #FFF;
+      padding-right: 11px; }
+      #race-seasons li.active a:after {
+        display: inline-block;
+        content: ">";
+        font-size: 14px;
+        margin-left: 3px;
+        line-height: 8px;
+        margin-bottom: 2px; }
+  #race-seasons a {
+    display: inline-block;
+    font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: normal;
+    color: #FFF;
+    color: #000;
+    text-align: right;
+    width: 130px;
+    background-color: rgba(141, 199, 45, 0.8);
+    padding-right: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* ############################################################################################ */
+/* MAP */
+/* ############################################################################################ */
+#map {
+  display: block;
+  position: absolute;
+  left: 50px;
+  bottom: 160px; }
+  #map a {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: normal;
+    color: gray;
+    text-transform: uppercase;
+    font-weight: bold; }
+    #map a:hover h3 {
+      top: -58px;
+      left: 21px; }
+    #map a:hover h4 {
+      top: -43px;
+      left: 21px; }
+  #map .info {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; }
+  #map .animated {
+    -webkit-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    -moz-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    -ms-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    -o-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1); }
+  #map .info .point {
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: #8fc730;
+    border-radius: 10px; }
+  #map .line {
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 30px;
+    top: -30px;
+    background-image: url("data:image/svg+xml;utf8,<svg id='rubber-band-SVG' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 22 30' preserveAspectRatio='none' xml:space='preserve' width='100%' height='100%'><line vector-effect='non-scaling-stroke' fill='none' stroke='%238DC72D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' x1='0' y1='30' x2='22' y2='0'/></svg>"); }
+  #map h3 {
+    display: block;
+    position: absolute;
+    top: -48px;
+    left: 13px;
+    color: #FFF;
+    background-color: #000;
+    padding: 0 4px;
+    white-space: nowrap;
+    pointer-events: none; }
+  #map h4 {
+    display: block;
+    position: absolute;
+    top: -33px;
+    left: 13px;
+    color: #000;
+    background-color: #8fc730;
+    padding: 0 4px;
+    white-space: nowrap;
+    pointer-events: none; }
+  #map h3, #map h4 {
+    -webkit-transition: left, top, 100ms ease-out;
+    -moz-transition: left, top, 100ms ease-out;
+    -ms-transition: left, top, 100ms ease-out;
+    -o-transition: left, top, 100ms ease-out;
+    transition: left, top, 100ms ease-out; }
+
+/* ############################################################################################ */
+/* INFO POINT */
+/* ############################################################################################ */
+#info-point {
+  display: block;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  margin-left: -35px;
+  margin-top: -35px;
+  white-space: nowrap;
+  -webkit-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+  -moz-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+  -ms-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+  -o-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+  transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1); }
+  #info-point .glow {
+    width: 70px;
+    height: 70px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
+    background-image: -moz-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
+    background-image: -ms-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
+    background-image: -o-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
+    background-image: radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
+    opacity: 0.75; }
+  #info-point .glow.animated {
+    -webkit-animation: fade 1s ease-in-out infinite alternate;
+    -moz-animation: fade 1s ease-in-out infinite alternate;
+    -o-animation: fade 1s ease-in-out infinite alternate;
+    -ms-animation: fade 1s ease-in-out infinite alternate;
+    animation: fade 1s ease-in-out infinite alternate; }
+  #info-point:hover li {
+    width: 100%; }
+  #info-point:hover h4:before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    margin-left: -3px;
+    border-style: solid;
+    border-width: 5px 3px 5px 0;
+    border-color: transparent white transparent transparent;
+    top: 3px;
+    left: 0; }
+  #info-point:hover .glow.animated {
+    opacity: 1;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    -ms-animation: none;
+    animation: none; }
+  #info-point .info-point {
+    display: block;
+    position: absolute;
+    opacity: 0.75;
+    left: 26px;
+    top: 27px; }
+  #info-point .info-data {
+    display: block;
+    position: absolute;
+    font-size: 0px;
+    top: 27px;
+    left: 55px;
+    pointer-events: none; }
+  #info-point li {
+    display: block;
+    margin-bottom: 1px;
+    width: 0%;
+    overflow: hidden;
+    -webkit-transition: width, 300ms ease-out;
+    -moz-transition: width, 300ms ease-out;
+    -ms-transition: width, 300ms ease-out;
+    -o-transition: width, 300ms ease-out;
+    transition: width, 300ms ease-out; }
+  #info-point li:nth-child(2) {
+    -webkit-transition-delay: 30ms;
+    -moz-transition-delay: 30ms;
+    -ms-transition-delay: 30ms;
+    -o-transition-delay: 30ms;
+    transition-delay: 30ms; }
+  #info-point li:nth-child(3) {
+    -webkit-transition-delay: 60ms;
+    -moz-transition-delay: 60ms;
+    -ms-transition-delay: 60ms;
+    -o-transition-delay: 60ms;
+    transition-delay: 60ms; }
+  #info-point li:nth-child(4) {
+    -webkit-transition-delay: 90ms;
+    -moz-transition-delay: 90ms;
+    -ms-transition-delay: 90ms;
+    -o-transition-delay: 90ms;
+    transition-delay: 90ms; }
+  #info-point li:nth-child(5) {
+    -webkit-transition-delay: 120ms;
+    -moz-transition-delay: 120ms;
+    -ms-transition-delay: 120ms;
+    -o-transition-delay: 120ms;
+    transition-delay: 120ms; }
+  #info-point li:nth-child(6) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms; }
+  #info-point h3 {
+    width: auto; }
+    #info-point h3 span {
+      font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      line-height: 32px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+      color: #FFF;
+      font-size: 30px;
+      line-height: 34px;
+      background-color: white;
+      color: black;
+      padding: 0 4px; }
+  #info-point h4 {
+    width: auto; }
+    #info-point h4 span {
+      font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+      color: #FFF;
+      color: black;
+      background-color: white;
+      padding: 0 4px; }
+  #info-point h5 {
+    display: inline-block;
+    overflow: hidden;
+    width: auto; }
+    #info-point h5 span {
+      font-size: 10px;
+      line-height: 18px;
+      font-weight: normal;
+      color: gray;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 0 4px;
+      background-color: black;
+      color: white;
+      line-height: 12px; }
+      #info-point h5 span:first-child {
+        color: black;
+        background-color: #8fc730; }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.75; }
+
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fade {
+  0% {
+    opacity: 0.75; }
+
+  100% {
+    opacity: 0; } }
+
+@-ms-keyframes fade {
+  0% {
+    opacity: 0.75; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes fade {
+  0% {
+    opacity: 0.75; }
+
+  100% {
+    opacity: 0; } }
+
+/* ############################################################################################ */
+/* PHOTOS */
+/* ############################################################################################ */
+#location-photo {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  #location-photo > div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  #location-photo ul {
+    display: none; }
+  #location-photo .slide-in, #location-photo .slide-out {
+    -webkit-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    -moz-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    -ms-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    -o-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
+    transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1); }
+  #location-photo > canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0; }
