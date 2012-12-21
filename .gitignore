@@ -21,6 +21,7 @@ _sprites/
 .sass-cache/
 .idea/
 _webapp_backups/
+_bugs/
 
 # External tool builders
 .externalToolBuilders/
