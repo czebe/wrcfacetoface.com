@@ -78,8 +78,8 @@
         height: 240px;
         margin-left: 10px;
         margin-top: 34px;
-        -webkit-box-shadow: 0px 30px 30px 10px rgba(0, 0, 0, 0.7);
-        box-shadow: 0px 30px 30px 10px rgba(0, 0, 0, 0.7); }
+        -webkit-box-shadow: compact(0px 30px 30px 10px rgba(0, 0, 0, 0.7), false, false, false, false, false, false, false, false);
+        box-shadow: compact(0px 30px 30px 10px rgba(0, 0, 0, 0.7), false, false, false, false, false, false, false, false); }
       .page figure .cover img {
         display: block;
         position: absolute; }

@@ -1,5 +1,6 @@
 
 @import "bourbon/bourbon";
+@import "mixins";
 
 
 body > footer {
@@ -85,7 +86,7 @@ body > footer {
 			height: 40px;
 		}
 
-		embed {
+		.wrc-logo {
 			display: block;
 			position: absolute;
 			bottom: 20px;
@@ -102,6 +103,30 @@ body > footer {
 		}
 	}
 
+	.sponsors {
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 32px;
+		margin-left: -76px;
+		opacity: 0.6;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+
+			a {
+				display: block;
+				color: rgba(#000, 0);
+				font-size: 0;
+			}
+		}
+
+		@include mediaquery(width, 0px, 1000px) {
+			display: none;
+		}
+	}
+
 	.carnationgroup-logo {
 		display: block;
 		position: absolute;
@@ -115,7 +140,7 @@ body > footer {
 	.social-container {
 		display: block;
 		position: absolute;
-		width:300px;
+		width: 250px;
 		bottom: 30px;
 		left: 180px;
 
@@ -130,8 +155,8 @@ body > footer {
 			display: block;
 			float: left;
 			vertical-align: top;
-            font-size: 0;
-            color: rgba(#000, 0);
+			font-size: 0;
+			color: rgba(#000, 0);
 
 			&:nth-child(2) {
 				margin: 0 20px;

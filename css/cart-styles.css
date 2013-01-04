@@ -53,7 +53,7 @@
       .page > aside .totals p:last-child {
         font-size: 18px !important;
         margin-top: 10px;
-        color: #FFF !important;
+        color: white !important;
         font-weight: bold; }
         .page > aside .totals p:last-child strong {
           color: #8fc730; }
@@ -400,11 +400,11 @@ input {
 /* ORDER */
 /* ############################################################################################ */
 use {
-  -webkit-transition: opacity 700ms, ease-out;
-  -moz-transition: opacity 700ms, ease-out;
-  -ms-transition: opacity 700ms, ease-out;
-  -o-transition: opacity 700ms, ease-out;
-  transition: opacity 700ms, ease-out; }
+  -webkit-transition: compact(opacity 700ms, ease-out, false, false, false, false, false, false, false);
+  -moz-transition: compact(opacity 700ms, ease-out, false, false, false, false, false, false, false);
+  -ms-transition: compact(opacity 700ms, ease-out, false, false, false, false, false, false, false);
+  -o-transition: compact(opacity 700ms, ease-out, false, false, false, false, false, false, false);
+  transition: compact(opacity 700ms, ease-out, false, false, false, false, false, false, false); }
 
 .navigate-cart.hidden {
   right: -230px !important;

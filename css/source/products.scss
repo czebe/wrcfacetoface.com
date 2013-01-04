@@ -1,6 +1,6 @@
 
 @import "mixins";
-@import "compass/css3/box-shadow";
+@import "bourbon/bourbon";
 
 
 /* ############################################################################################ */
@@ -88,7 +88,7 @@ article.overview {
 			position: relative;
 			vertical-align: middle;
 			margin: -157px auto 0 auto;
-			@include single-box-shadow(rgba(0, 0, 0, 0.5) 5px 15px 10px 2px);
+			@include box-shadow(5px 15px 10px 2px rgba(0, 0, 0, 0.5));
 			
 			img, canvas {
 				@include fullsize;

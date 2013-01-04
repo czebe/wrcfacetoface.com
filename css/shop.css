@@ -53,7 +53,7 @@
       .page > aside .totals p:last-child {
         font-size: 18px !important;
         margin-top: 10px;
-        color: #FFF !important;
+        color: white !important;
         font-weight: bold; }
         .page > aside .totals p:last-child strong {
           color: #8fc730; }
@@ -215,8 +215,8 @@ body.shop .page {
     height: 50%;
     margin: 60px 28px 0 28px;
     content: '';
-    -webkit-box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.6);
-    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.6); }
+    -webkit-box-shadow: compact(0px 5px 15px 5px rgba(0, 0, 0, 0.6), false, false, false, false, false, false, false, false);
+    box-shadow: compact(0px 5px 15px 5px rgba(0, 0, 0, 0.6), false, false, false, false, false, false, false, false); }
 #products-container h2 {
   display: block;
   font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;

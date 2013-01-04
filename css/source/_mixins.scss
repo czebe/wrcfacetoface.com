@@ -105,7 +105,7 @@ $triangle-ratio: 0.2833;
 	}
 }
 
-@mixin mediaquery($queryProperty: width, $mediaMin: 100, $mediaMax: 0) {
+@mixin mediaquery($queryProperty: width, $mediaMin: 100px, $mediaMax: 0px) {
 	$query: "";
 	@if $mediaMax > $mediaMin {
 		$query: "only screen and (min-" + $queryProperty + ": " + $mediaMin + ") and (max-" + $queryProperty + ": " + $mediaMax + ")";

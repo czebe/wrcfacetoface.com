@@ -13,11 +13,11 @@
     display: block;
     width: 100%;
     margin-bottom: 1px;
-    -webkit-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
-    -moz-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
-    -ms-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1);
-    transition: background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1); }
+    -webkit-transition: compact(background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1), false, false, false, false, false, false, false, false);
+    -moz-transition: compact(background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1), false, false, false, false, false, false, false, false);
+    -ms-transition: compact(background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1), false, false, false, false, false, false, false, false);
+    -o-transition: compact(background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1), false, false, false, false, false, false, false, false);
+    transition: compact(background-position-x 1200ms cubic-bezier(0.19, 1, 0.22, 1), false, false, false, false, false, false, false, false); }
     #race-locations hr.thick {
       height: 11px;
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABVAAAAABAQMAAAACWhf+AAAABlBMVEWNxy2Nxy0mrWjOAAAAAnRSTlMAM8lDrC4AAAAUSURBVHheY/iPC/xjoC+w/08AAAAGODoF8gfQFQAAAABJRU5ErkJggg=="); }
@@ -139,11 +139,11 @@
     left: 0;
     opacity: 0; }
   #map .animated {
-    -webkit-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    -ms-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    -o-transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    transition: opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1); }
+    -webkit-transition: compact(opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false);
+    -moz-transition: compact(opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false);
+    -ms-transition: compact(opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false);
+    -o-transition: compact(opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false);
+    transition: compact(opacity, left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false); }
   #map .info .point {
     display: block;
     position: absolute;
@@ -181,11 +181,11 @@
     white-space: nowrap;
     pointer-events: none; }
   #map h3, #map h4 {
-    -webkit-transition: left, top, 100ms ease-out;
-    -moz-transition: left, top, 100ms ease-out;
-    -ms-transition: left, top, 100ms ease-out;
-    -o-transition: left, top, 100ms ease-out;
-    transition: left, top, 100ms ease-out; }
+    -webkit-transition: compact(left, top, 100ms ease-out, false, false, false, false, false, false);
+    -moz-transition: compact(left, top, 100ms ease-out, false, false, false, false, false, false);
+    -ms-transition: compact(left, top, 100ms ease-out, false, false, false, false, false, false);
+    -o-transition: compact(left, top, 100ms ease-out, false, false, false, false, false, false);
+    transition: compact(left, top, 100ms ease-out, false, false, false, false, false, false); }
 
 /* ############################################################################################ */
 /* INFO POINT */
@@ -198,20 +198,20 @@
   margin-left: -35px;
   margin-top: -35px;
   white-space: nowrap;
-  -webkit-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-  -moz-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-  -ms-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-  -o-transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-  transition: left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1); }
+  -webkit-transition: compact(left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false);
+  -moz-transition: compact(left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false);
+  -ms-transition: compact(left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false);
+  -o-transition: compact(left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false);
+  transition: compact(left, top, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false); }
   #info-point .glow {
     width: 70px;
     height: 70px;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    background-image: -webkit-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
-    background-image: -moz-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
-    background-image: -ms-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
-    background-image: -o-radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
-    background-image: radial-gradient(50% 50%, circle contain, #8fc730 0%, rgba(143, 199, 48, 0) 100%);
+    background-image: compact(radial, compact(50% 50%, circle contain, false, false, #8fc730 0%, rgba(143, 199, 48, 0) 100%, false, false, false, false, false, false), false, false, false, false, false, false, false, false, false);
+    background-image: compact(radial, compact(50% 50%, circle contain, false, false, #8fc730 0%, rgba(143, 199, 48, 0) 100%, false, false, false, false, false, false), false, false, false, false, false, false, false, false, false);
+    background-image: compact(radial, compact(50% 50%, circle contain, false, false, #8fc730 0%, rgba(143, 199, 48, 0) 100%, false, false, false, false, false, false), false, false, false, false, false, false, false, false, false);
+    background-image: compact(radial, compact(50% 50%, circle contain, false, false, #8fc730 0%, rgba(143, 199, 48, 0) 100%, false, false, false, false, false, false), false, false, false, false, false, false, false, false, false);
+    background-image: compact(radial, compact(50% 50%, circle contain, false, false, #8fc730 0%, rgba(143, 199, 48, 0) 100%, false, false, false, false, false, false), false, false, false, false, false, false, false, false, false);
     opacity: 0.75; }
   #info-point .glow.animated {
     -webkit-animation: fade 1s ease-in-out infinite alternate;
@@ -257,41 +257,41 @@
     margin-bottom: 1px;
     width: 0%;
     overflow: hidden;
-    -webkit-transition: width, 300ms ease-out;
-    -moz-transition: width, 300ms ease-out;
-    -ms-transition: width, 300ms ease-out;
-    -o-transition: width, 300ms ease-out;
-    transition: width, 300ms ease-out; }
+    -webkit-transition: compact(width, 300ms ease-out, false, false, false, false, false, false, false);
+    -moz-transition: compact(width, 300ms ease-out, false, false, false, false, false, false, false);
+    -ms-transition: compact(width, 300ms ease-out, false, false, false, false, false, false, false);
+    -o-transition: compact(width, 300ms ease-out, false, false, false, false, false, false, false);
+    transition: compact(width, 300ms ease-out, false, false, false, false, false, false, false); }
   #info-point li:nth-child(2) {
-    -webkit-transition-delay: 30ms;
-    -moz-transition-delay: 30ms;
-    -ms-transition-delay: 30ms;
-    -o-transition-delay: 30ms;
-    transition-delay: 30ms; }
+    -webkit-transition-delay: compact(30ms, false, false, false, false, false, false, false, false);
+    -moz-transition-delay: compact(30ms, false, false, false, false, false, false, false, false);
+    -ms-transition-delay: compact(30ms, false, false, false, false, false, false, false, false);
+    -o-transition-delay: compact(30ms, false, false, false, false, false, false, false, false);
+    transition-delay: compact(30ms, false, false, false, false, false, false, false, false); }
   #info-point li:nth-child(3) {
-    -webkit-transition-delay: 60ms;
-    -moz-transition-delay: 60ms;
-    -ms-transition-delay: 60ms;
-    -o-transition-delay: 60ms;
-    transition-delay: 60ms; }
+    -webkit-transition-delay: compact(60ms, false, false, false, false, false, false, false, false);
+    -moz-transition-delay: compact(60ms, false, false, false, false, false, false, false, false);
+    -ms-transition-delay: compact(60ms, false, false, false, false, false, false, false, false);
+    -o-transition-delay: compact(60ms, false, false, false, false, false, false, false, false);
+    transition-delay: compact(60ms, false, false, false, false, false, false, false, false); }
   #info-point li:nth-child(4) {
-    -webkit-transition-delay: 90ms;
-    -moz-transition-delay: 90ms;
-    -ms-transition-delay: 90ms;
-    -o-transition-delay: 90ms;
-    transition-delay: 90ms; }
+    -webkit-transition-delay: compact(90ms, false, false, false, false, false, false, false, false);
+    -moz-transition-delay: compact(90ms, false, false, false, false, false, false, false, false);
+    -ms-transition-delay: compact(90ms, false, false, false, false, false, false, false, false);
+    -o-transition-delay: compact(90ms, false, false, false, false, false, false, false, false);
+    transition-delay: compact(90ms, false, false, false, false, false, false, false, false); }
   #info-point li:nth-child(5) {
-    -webkit-transition-delay: 120ms;
-    -moz-transition-delay: 120ms;
-    -ms-transition-delay: 120ms;
-    -o-transition-delay: 120ms;
-    transition-delay: 120ms; }
+    -webkit-transition-delay: compact(120ms, false, false, false, false, false, false, false, false);
+    -moz-transition-delay: compact(120ms, false, false, false, false, false, false, false, false);
+    -ms-transition-delay: compact(120ms, false, false, false, false, false, false, false, false);
+    -o-transition-delay: compact(120ms, false, false, false, false, false, false, false, false);
+    transition-delay: compact(120ms, false, false, false, false, false, false, false, false); }
   #info-point li:nth-child(6) {
-    -webkit-transition-delay: 150ms;
-    -moz-transition-delay: 150ms;
-    -ms-transition-delay: 150ms;
-    -o-transition-delay: 150ms;
-    transition-delay: 150ms; }
+    -webkit-transition-delay: compact(150ms, false, false, false, false, false, false, false, false);
+    -moz-transition-delay: compact(150ms, false, false, false, false, false, false, false, false);
+    -ms-transition-delay: compact(150ms, false, false, false, false, false, false, false, false);
+    -o-transition-delay: compact(150ms, false, false, false, false, false, false, false, false);
+    transition-delay: compact(150ms, false, false, false, false, false, false, false, false); }
   #info-point h3 {
     width: auto; }
     #info-point h3 span {
@@ -388,11 +388,11 @@
   #location-photo ul {
     display: none; }
   #location-photo .slide-in, #location-photo .slide-out {
-    -webkit-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    -moz-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    -ms-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    -o-transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1);
-    transition: left, 500ms cubic-bezier(0.68, 0, 0.265, 1); }
+    -webkit-transition: compact(left, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false, false);
+    -moz-transition: compact(left, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false, false);
+    -ms-transition: compact(left, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false, false);
+    -o-transition: compact(left, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false, false);
+    transition: compact(left, 500ms cubic-bezier(0.68, 0, 0.265, 1), false, false, false, false, false, false, false); }
   #location-photo > canvas {
     display: block;
     position: absolute;
