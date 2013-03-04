@@ -50,7 +50,7 @@ WRC.PageController = function() {
 	};
 	
 	this.updateState = function(oldState, newState, sectionPath) {
-		if (newState < 0) newState = 0;
+		if (newState < 0) newState = WRC.navigation.states.length - 1;
 		
 		//SET CURRENT SECTION
 		var allLocations = $('#race-locations li');
@@ -207,15 +207,15 @@ WRC.PageController = function() {
 		var date = raceData.find('.date').text();
 		var raceStart = Date.parse(date);
 
-		var startDay = raceStart.getUTCDate();
-		var startMonth = monthNames[raceStart.getUTCMonth()];
+		var startDay = raceStart.getDate();
+		var startMonth = monthNames[raceStart.getMonth()];
 		
 		var raceEnd = new Date();
 		var duration = parseInt(raceData.find('.duration').text());
 		raceEnd.setTime(raceStart.getTime() + duration * 86400000);
-		var endDay = raceEnd.getUTCDate();
-		var endMonth = monthNames[raceEnd.getUTCMonth()];
-		var year = raceEnd.getUTCFullYear();
+		var endDay = raceEnd.getDate();
+		var endMonth = monthNames[raceEnd.getMonth()];
+		var year = raceEnd.getFullYear();
 		
 		var dateLabel = startDay + ((startMonth != endMonth) ? ' ' + startMonth : '') + '–' + endDay + ' ' + endMonth + ' ' + year;
 		info.find('h4').text(dateLabel);
@@ -253,6 +253,13 @@ WRC.PageController = function() {
 		var unscaledPercentageY = Math.round(infoy / photoHeight * 100);
 
 		infoPoint.css({'left': unscaledPercentageX + "%", 'top': unscaledPercentageY + "%"});
+
+		//HIDE IF DATA IS MISSING
+		if (raceData.find('.firstname').text() == '' || raceData.find('.lastname').text() == '') {
+			infoPoint.css('visibility', 'hidden');
+		} else {
+			infoPoint.css('visibility', 'visible');
+		}
 
 		//LOAD THUMBNAIL IMAGE
 		//previousImage.find('.photo').text()
@@ -328,7 +335,7 @@ WRC.PageController = function() {
 			locationGroup.append(menuItem);
 			
 			//CREATE SEASON NAVIGATION
-			var $seasonItem = $('#race-seasons ul').first().find('li'); //('li[data-season=' + year + ']');
+			var $seasonItem = $('#race-seasons ul').find('li[data-season=' + year + ']');
 			if ($seasonItem.length == 0) {
 				$seasonItem = $(document.createElement('li'));
 				$seasonItem.attr('data-season', year);
@@ -348,9 +355,6 @@ WRC.PageController = function() {
 		$('#race-seasons ul').first().css('top', -$('#race-seasons li.active').first().index() * 22);
 		*/
 
-		
-		
-		
 	};
 	
 	function fromCoordinatesToPixel(coordinates) {
