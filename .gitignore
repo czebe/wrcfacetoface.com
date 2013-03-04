@@ -168,3 +168,9 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+*.DS_Store
+
+*.DS_Store
+
+i/races/2013/._wrc-2013-01-monaco-001.jpg
