@@ -1,0 +1,28 @@
+---
+css:<link rel="stylesheet" href="/css/cart-styles.css" type="text/css" media="screen" />
+script:<script type="text/javascript" src="/source/js/messages_en.js"></script>
+---
+<!-- HEADER -->
+{module_menu, version="2", menuId="1367475", moduleTemplateGroup="Mainmenu"}
+
+<!-- PAGE CONTENT -->
+{tag_pagecontent}
+
+<!-- FOOTER -->
+{module_contentholder, name="Footer"}
+
+<!-- SCRIPTS -->
+<script>
+	var scriptsQueue = scriptsQueue || new Array();
+	scriptsQueue.push('/CatalystScripts/ValidationFunctions.js');
+
+	//CHECK IF CART IS EMPTY
+	if (document.getElementsByClassName('page').length == 0 && document.getElementsByClassName('cartLink').length == 1) {
+		document.getElementsByClassName('cartLink').item(0).innerHTML = Oshoplang.CartEmptyFormatted
+		document.getElementsByClassName('cartLink').item(0).setAttribute("href", "/products");
+	}
+</script>
+{module_contentholder, name="Scripts"}
+
+<!-- PRELOAD LAYER -->
+{module_contentholder, name="Preload"}
