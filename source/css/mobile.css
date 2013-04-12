@@ -1,0 +1,635 @@
+/* ############################################################################################ */
+/* GENERAL RESET, USED ON ALL PAGES */
+/* ############################################################################################ */
+html, body {
+  width: 100%;
+  height: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:focus,
+input:focus,
+textarea:focus {
+  outline: none; }
+
+::-moz-selection {
+  background: #8dc72d;
+  color: #000; }
+
+::selection {
+  background: #8dc72d;
+  color: #000;
+  outline: none; }
+
+a {
+  cursor: pointer; }
+
+a:focus, input:focus, textarea:focus {
+  outline: none; }
+
+hr {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased; }
+
+/* ############################################################################################ */
+/* RASTER SPRITES */
+/* ############################################################################################ */
+/* SET SIZE TO HALF */
+.rastersprite {
+  background-repeat: no-repeat;
+  background-image: url(/i/rastersprite.png);
+  background-size: 228px 113px; }
+
+.carnationgroup-logo {
+  width: 147px;
+  height: 11px;
+  background-position: -4px -84px; }
+
+.cartbasket {
+  width: 104px;
+  height: 28px;
+  background-position: -32px -4px; }
+
+.cartsummary-basket {
+  width: 22px;
+  height: 15px;
+  background-position: -4px -4px; }
+
+.paypal {
+  width: 112px;
+  height: 30px;
+  background-position: -110px -38px; }
+
+.step-shadow {
+  width: 170px;
+  height: 8px;
+  background-position: -4px -101px; }
+
+.wrc-logo {
+  width: 100px;
+  height: 40px;
+  background-position: -4px -38px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  .rastersprite {
+    background-image: url(/i/rastersprite-2x.png); } }
+/* ############################################################################################ */
+/* VECTOR SPRITES */
+/* ############################################################################################ */
+.vectorsprite {
+  background-repeat: no-repeat;
+  background-image: url(/i/vectorsprite.png); }
+
+.arrow-left {
+  width: 9px;
+  height: 22px;
+  background-position: -460px -2px; }
+
+.arrow-right {
+  width: 9px;
+  height: 22px;
+  background-position: -471px -2px; }
+
+.black-prev-next {
+  width: 220px;
+  height: 60px;
+  background-position: -272px -73px; }
+
+.cartsummary {
+  width: 277px;
+  height: 31px;
+  background-position: -2px -34px; }
+
+.checkbox-bg {
+  width: 40px;
+  height: 33px;
+  background-position: -328px -34px; }
+
+.checked {
+  width: 40px;
+  height: 33px;
+  background-position: -370px -34px; }
+
+.citroen-logo {
+  width: 21px;
+  height: 18px;
+  background-position: -310px -2px; }
+
+.contact-email {
+  width: 29px;
+  height: 18px;
+  background-position: -279px -2px; }
+
+.contact-location {
+  width: 22px;
+  height: 32px;
+  background-position: -304px -34px; }
+
+.contact-phone {
+  width: 21px;
+  height: 31px;
+  background-position: -281px -34px; }
+
+.dhl-logo {
+  width: 53px;
+  height: 8px;
+  background-position: -2px -2px; }
+
+.downloads-thumbnail-shine {
+  width: 105px;
+  height: 92px;
+  background-position: -332px -135px; }
+
+.downloads-thumbnail-stroke {
+  width: 93px;
+  height: 80px;
+  background-position: -237px -135px; }
+
+.dragbar {
+  width: 18px;
+  height: 110px;
+  background-position: -439px -135px; }
+
+.eye-icon {
+  width: 30px;
+  height: 18px;
+  background-position: -353px -2px; }
+
+.fb-join {
+  width: 60px;
+  height: 20px;
+  background-position: -385px -2px; }
+
+.green-prev-next {
+  width: 220px;
+  height: 60px;
+  background-position: -494px -73px; }
+
+.hdragbar {
+  width: 111px;
+  height: 18px;
+  background-position: -166px -2px; }
+
+.info-point {
+  width: 18px;
+  height: 16px;
+  background-position: -146px -2px; }
+
+.input-bg {
+  width: 294px;
+  height: 37px;
+  background-position: -412px -34px; }
+
+.input-small-bg {
+  width: 128px;
+  height: 37px;
+  background-position: -2px -73px; }
+
+.largedot {
+  width: 428px;
+  height: 370px;
+  background-position: -328px -297px; }
+
+.largedot-shine {
+  width: 324px;
+  height: 370px;
+  background-position: -2px -297px; }
+
+.mainmenu-line1 {
+  width: 35px;
+  height: 62px;
+  background-position: -100px -135px; }
+
+.mainmenu-line2 {
+  width: 35px;
+  height: 62px;
+  background-position: -137px -135px; }
+
+.mainmenu-point {
+  width: 58px;
+  height: 50px;
+  background-position: -212px -73px; }
+
+.mainmenu-point-over {
+  width: 58px;
+  height: 50px;
+  background-position: -152px -73px; }
+
+.menu-opener {
+  width: 62px;
+  height: 30px;
+  background-position: -584px -2px; }
+
+.menu-opener-over {
+  width: 62px;
+  height: 30px;
+  background-position: -648px -2px; }
+
+.nikon-logo {
+  width: 41px;
+  height: 12px;
+  background-position: -70px -2px; }
+
+.onedot {
+  width: 11px;
+  height: 10px;
+  background-position: -57px -2px; }
+
+.prev-next-shine {
+  width: 96px;
+  height: 60px;
+  background-position: -2px -135px; }
+
+.quantity-button {
+  width: 32px;
+  height: 27px;
+  background-position: -516px -2px; }
+
+.quotemark {
+  width: 18px;
+  height: 38px;
+  background-position: -132px -73px; }
+
+.remove {
+  width: 32px;
+  height: 27px;
+  background-position: -550px -2px; }
+
+.select-arrow {
+  width: 32px;
+  height: 27px;
+  background-position: -482px -2px; }
+
+.smalldot-shine {
+  width: 61px;
+  height: 70px;
+  background-position: -174px -135px; }
+
+.threedots {
+  width: 31px;
+  height: 15px;
+  background-position: -113px -2px; }
+
+.thumbnail-stroke {
+  width: 185px;
+  height: 160px;
+  background-position: -459px -135px; }
+
+.twodots {
+  width: 11px;
+  height: 21px;
+  background-position: -447px -2px; }
+
+.vw-logo {
+  width: 18px;
+  height: 18px;
+  background-position: -333px -2px; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #333;
+  background-image: url(/i/diagonal-gradient.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+.composite-alpha img {
+  display: none; }
+
+.page {
+  position: relative;
+  overflow: hidden;
+  z-index: 5;
+  overflow: hidden;
+  min-width: 100%; }
+
+/* ############################################################################################ */
+/* HEADER & MENU */
+/* ############################################################################################ */
+body > header {
+  display: none; }
+
+#menu-opener {
+  display: none; }
+
+/* ############################################################################################ */
+/* FONTS */
+/* ############################################################################################ */
+@font-face {
+  font-family: 'DaysRegular';
+  src: url("/css/fonts/Days-webfont.eot");
+  src: url("/css/fonts/Days-webfont.eot") format("embedded-opentype"), url("/css/fonts/Days-webfont.woff") format("woff"), url("/css/fonts/Days-webfont.ttf") format("truetype"), url("/css/fonts/Days-webfont.svg#DaysRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* ############################################################################################ */
+/* COMMON STYLES  */
+/* ############################################################################################ */
+.formatted-price {
+  display: none; }
+
+hr.horizontal-line-32px {
+  width: 32px;
+  height: 3px;
+  color: #8fc730;
+  background-color: #8fc730; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.align-top {
+  display: block;
+  position: absolute;
+  top: 0; }
+
+.align-bottom {
+  position: absolute;
+  bottom: 0; }
+
+.align-right {
+  display: block;
+  position: absolute;
+  right: 0; }
+
+.fb-like {
+  overflow: hidden; }
+
+#preload {
+  display: none; }
+
+body > footer {
+  position: relative;
+  width: 100%; }
+  body > footer .floor {
+    display: none; }
+  body > footer nav {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 80px; }
+    body > footer nav:hover .gradient {
+      opacity: 0.75; }
+  body > footer .gradient {
+    position: relative !important;
+    height: 140px;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    -webkit-transition: opacity 0.6s ease-out;
+    -moz-transition: opacity 0.6s ease-out;
+    -ms-transition: opacity 0.6s ease-out;
+    -o-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out; }
+  body > footer .richard-balint-logo {
+    width: 115px;
+    height: 83px; }
+    body > footer .richard-balint-logo hr:first-child {
+      display: none; }
+    body > footer .richard-balint-logo h2 {
+      display: block;
+      height: 40px;
+      text-transform: uppercase;
+      font-family: 'DaysRegular';
+      font-size: 18px;
+      line-height: 15px;
+      text-align: right; }
+      body > footer .richard-balint-logo h2 a {
+        text-decoration: none;
+        color: #FFF; }
+  body > footer .wrc {
+    position: absolute;
+    width: 230px;
+    height: 83px;
+    right: 20px;
+    bottom: 0;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transform-origin: right bottom;
+    -moz-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    -o-transform-origin: right bottom;
+    transform-origin: right bottom; }
+    body > footer .wrc hr:first-child {
+      display: none; }
+    body > footer .wrc h2 {
+      display: block;
+      position: absolute;
+      text-transform: uppercase;
+      font-family: 'DaysRegular';
+      text-rendering: optimizeLegibility;
+      font-size: 8.5px;
+      line-height: 10px;
+      color: #FFF;
+      text-align: right;
+      bottom: 21px;
+      right: 110px;
+      height: 40px; }
+    body > footer .wrc .wrc-logo {
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      width: 100px;
+      height: 40px; }
+    body > footer .wrc a {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+  body > footer .sponsors {
+    display: none; }
+  body > footer .carnationgroup-logo {
+    display: none; }
+  body > footer .social-container {
+    display: block;
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+    text-align: center; }
+    body > footer .social-container a.fb-join {
+      display: inline-block;
+      font-size: 0;
+      color: rgba(0, 0, 0, 0);
+      vertical-align: top; }
+    body > footer .social-container li {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+      color: rgba(0, 0, 0, 0); }
+      body > footer .social-container li:nth-child(2) {
+        margin: 0 20px; }
+
+body.contact {
+  /* ############################################################################################ */
+  /* CONTENT */
+  /* ############################################################################################ */
+  /* ############################################################################################ */
+  /* PAGE DECORATIONS */
+  /* ############################################################################################ */
+  /* ############################################################################################ */
+  /* FOOTER */
+  /* ############################################################################################ */ }
+  body.contact .content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 20px; }
+    body.contact .content svg {
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      visibility: hidden;
+      z-index: -1; }
+    body.contact .content h1 {
+      font-family: DaysRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 28px;
+      line-height: 32px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: normal;
+      color: #FFF;
+      margin-bottom: 6px; }
+    body.contact .content h2 {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: normal;
+      color: gray;
+      color: #FFF; }
+    body.contact .content address {
+      padding: 20px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-bottom: 80px; }
+    body.contact .content a {
+      display: block;
+      position: relative;
+      color: gray;
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 16px;
+      white-space: nowrap;
+      margin-bottom: 10px; }
+      html.no-touch body.contact .content a:hover, html.touch body.contact .content a {
+        color: #8fc730; }
+        html.no-touch body.contact .content a:hover figure, html.touch body.contact .content a figure {
+          background-color: #8fc730; }
+          html.no-touch body.contact .content a:hover figure:before, html.touch body.contact .content a figure:before {
+            border-right-color: #8fc730; }
+          html.no-touch body.contact .content a:hover figure:after, html.touch body.contact .content a figure:after {
+            border-left-color: #8fc730; }
+      body.contact .content a p {
+        color: #FFF;
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        margin-left: 30px; }
+    body.contact .content figure {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 60px;
+      width: 35px;
+      height: 60px; }
+      body.contact .content figure:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        margin-left: -17px;
+        border-style: solid;
+        border-width: 30px 17px 30px 0;
+        border-color: transparent transparent transparent transparent; }
+      body.contact .content figure:after {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        margin-left: 35px;
+        border-style: solid;
+        border-width: 30px 0 30px 17px;
+        border-color: transparent transparent transparent transparent; }
+      body.contact .content figure span {
+        display: inline-block;
+        vertical-align: middle; }
+  body.contact .car {
+    position: absolute;
+    width: 200%;
+    left: 0;
+    bottom: 0; }
+    body.contact .car canvas {
+      width: 100%;
+      height: auto; }
+  body.contact .form-bg-container {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1; }
+  body.contact .dust {
+    display: none; }
+  body.contact > footer .floor {
+    background: url(/i/floor-dark.png) 50% repeat-x;
+    height: 149px; }

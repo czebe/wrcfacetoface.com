@@ -4,26 +4,25 @@ var WRC = window.WRC || {};
 
 WRC.PageController = function() {
 	"use strict";
-	
+
 	var self = this;
-	
-	var xPixelsToDegreesRatio, yPixelsToRadiansRatio, halfPixelGlobeSize, pixelGlobeCenter;
+
 	var radiansToDegrees = Math.PI / 180;
-	
+
 	var photoWidth = 2880;
 	var photoHeight = 1920;
 	var photoScaling = 1;
 	var photoScalingParameters;
-	
+
 	var smallMapOffsetX = -7;
 	var smallMapOffsetY = -6;
-	
+
 	var pixelGlobeSize = 161;
-	xPixelsToDegreesRatio = pixelGlobeSize / 360;
-	yPixelsToRadiansRatio = pixelGlobeSize / (2 * Math.PI);
-	halfPixelGlobeSize = Math.round(pixelGlobeSize / 2);
-	pixelGlobeCenter = {x: halfPixelGlobeSize, y: halfPixelGlobeSize};
-	
+	var xPixelsToDegreesRatio = pixelGlobeSize / 360;
+	var yPixelsToRadiansRatio = pixelGlobeSize / (2 * Math.PI);
+	var halfPixelGlobeSize = Math.round(pixelGlobeSize / 2);
+	var pixelGlobeCenter = {x: halfPixelGlobeSize, y: halfPixelGlobeSize};
+
 	var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	var thumbnailSizing = '?action=thumbnail&width=270&height=164&algorithm=fill_proportional';
 
@@ -40,7 +39,7 @@ WRC.PageController = function() {
 
 	var preloadDelay;
 	var cacheDelay;
-	
+
 	this.init = function() {
 
  		canvasTools = new WRC.CanvasTools();
@@ -48,10 +47,10 @@ WRC.PageController = function() {
 		initializeNavigation();
 		attachListeners();
 	};
-	
+
 	this.updateState = function(oldState, newState, sectionPath) {
 		if (newState < 0) newState = WRC.navigation.states.length - 1;
-		
+
 		//SET CURRENT SECTION
 		var allLocations = $('#race-locations li');
 		var location = allLocations.eq(newState);
@@ -62,19 +61,19 @@ WRC.PageController = function() {
 			$('#race-locations ul').css('display', 'none');
 			$('#race-locations ul').eq(groupIndex).css('display', 'block');
 			$('#race-locations li').removeClass('active').eq(newState).addClass('active');
-			
+
 			$('#race-seasons li').removeClass('active').eq(groupIndex).addClass('active');
 			$('#race-seasons ul').first().css('top', -groupIndex * 22);
 		}
-		
+
 		//LOAD NECESSARY DATA FIRST
 		var currentLink =  location.data('href');
 		var nextIndex = newState < allLocations.length - 1 ? newState + 1 : 0;
 		var nextLink = $('#race-locations li').eq(nextIndex).data('href');
-		
+
 		var previousIndex = newState > 0 ? newState - 1 : allLocations.length - 1;
 		var previousLink =  $('#race-locations li').eq(previousIndex).data('href');
-	
+
 		$('#map .info').css({'opacity': 0, 'top': '+=20'});
 		direction = (newState - oldState > 0) ? 1 : (newState - oldState < 0) ? -1 : 0;
 		loadRaceData(currentLink, nextLink, previousLink);
@@ -82,16 +81,16 @@ WRC.PageController = function() {
 		preloadDelay = setTimeout(function() { $('#preload').removeClass('paused'); }, 1000);
 
 	};
-	
+
 	function loadRaceData(currentLink, nextLink, previousLink) {
 		dataPreload = 3;
 		currentImage.empty().load(currentLink + ' .race-data', onRaceDataLoaded);
 		nextImage.empty().load(nextLink + ' .race-data', onRaceDataLoaded);
 		previousImage.empty().load(previousLink + ' .race-data', onRaceDataLoaded);
 	};
-	
+
 	function onRaceDataLoaded() {
-		var photoContainer = $(this);	
+		var photoContainer = $(this);
 		dataPreload--;
 		if (dataPreload == 0) {
 			//ALL DATA LOADED, NOW PRELOAD NEW IMAGE
@@ -118,8 +117,8 @@ WRC.PageController = function() {
 			preloader.addImage(currentImage.find('.race-data .photo').text() + photoScalingParameters);
 			preloader.addCompletionListener(function(e) {
 				onNewImageLoaded(e.resource.img.src);
-			});	
-			
+			});
+
 			preloader.start();
 
 			//SET THUMBNAIL LINKS
@@ -128,14 +127,14 @@ WRC.PageController = function() {
 			$('.arrow-navigation .prev').attr('href', '#' + prevLink);
 			$('.arrow-navigation .next').attr('href', '#' + nextLink);
 		}
-		
+
 	};
-	
+
 	function onNewImageLoaded(src) {
 
 		clearTimeout(preloadDelay);
 		$('#preload').addClass('paused');
-		
+
 		if (direction == 0) {
 			photoTransitionComplete();
 		} else {
@@ -149,12 +148,12 @@ WRC.PageController = function() {
 			WRC.eventDispatcher.addEventListener(WRC.BACKGROUND_STITCH_READY, playTransition);
 			var currentBg = currentImage.css('background-image');
 			currentBg = currentBg.replace('url(','').replace(')','');;
-	
+
 			var stichedCanvas = canvasTools.stitchBackgrounds([currentBg, src]);
 			$('#location-photo').append(stichedCanvas);
 		}
 	};
-	
+
 	function playTransition() {
 
 		currentImage.css('background-image', 'none');
@@ -171,10 +170,10 @@ WRC.PageController = function() {
 		});
 
 	};
-	
+
 	function photoTransitionComplete() {
 		WRC.eventDispatcher.removeEventListener(WRC.BACKGROUND_STITCH_READY, playTransition);
-		
+
 		//REMOVE CANVAS
 		currentImage.css('background-image', 'url(' + currentImage.find('.race-data .photo').text() + photoScalingParameters + ')');
 
@@ -189,37 +188,37 @@ WRC.PageController = function() {
 			}
 		});
 		*/
-		
+
 		//SET UP MAP
 		var map = $('#map');
 		var raceData = currentImage.find('.race-data');
 		var mapCoordinates = raceData.find('.map-coordinates').text().split(",");
 		map.find('> a').attr('href', '//maps.google.com/maps?z=12&q=' + $.trim(mapCoordinates[0]) + "," + $.trim(mapCoordinates[1]));
-		
+
 		var info = map.find('.info');
-		var pixelCoords = fromCoordinatesToPixel({lat: parseFloat(mapCoordinates[0]), long: parseFloat(mapCoordinates[1])});
+		var pixelCoords = fromCoordinatesToPixel({'lat': parseFloat(mapCoordinates[0]), 'long': parseFloat(mapCoordinates[1])});
 		info.removeClass('animated');
 		info.css({'left': Math.round(pixelCoords.x), 'top': Math.round(pixelCoords.y + 20)});
 		info.get(0).offsetWidth;
 		info.addClass('animated').css({'top': pixelCoords.y, 'opacity': 1});
-		
+
 		info.find('h3').text(raceData.find('.name').text());
 		var date = raceData.find('.date').text();
 		var raceStart = Date.parse(date);
 
 		var startDay = raceStart.getDate();
 		var startMonth = monthNames[raceStart.getMonth()];
-		
+
 		var raceEnd = new Date();
 		var duration = parseInt(raceData.find('.duration').text());
 		raceEnd.setTime(raceStart.getTime() + duration * 86400000);
 		var endDay = raceEnd.getDate();
 		var endMonth = monthNames[raceEnd.getMonth()];
 		var year = raceEnd.getFullYear();
-		
+
 		var dateLabel = startDay + ((startMonth != endMonth) ? ' ' + startMonth : '') + '–' + endDay + ' ' + endMonth + ' ' + year;
 		info.find('h4').text(dateLabel);
-		
+
 		//DRIVER INFO
 		var infoPoint = $('#info-point');
 		var $infolink = infoPoint.find('a').first();
@@ -244,7 +243,7 @@ WRC.PageController = function() {
 		infoData.find('h5').eq(0).empty().append(country);
 		infoData.find('h5').eq(1).empty().append(carType);
 		infoData.find('h5').eq(2).empty().append(coDriver);
-		
+
 		var infox = parseInt(raceData.find('.infox').text());
 		var infoy = parseInt(raceData.find('.infoy').text());
 
@@ -276,7 +275,7 @@ WRC.PageController = function() {
 			preloader.start();
 		}, 1500);
 	};
-		
+
 	function attachListeners() {
 		$.address.bind('change', function(event) {
 			WRC.navigation.changeToSection(event.path, self, self.updateState);
@@ -285,16 +284,16 @@ WRC.PageController = function() {
 		if (WRC.siteController.isIE) {
 			self.updateState();
 		}
-		
+
 		$('#race-locations a').bind('mouseover', randomizeMenuBg);
 	};
-	
+
 	function randomizeMenuBg() {
 		$('#race-locations hr:not(.fixed)').each(function() {
 			$(this).css('background-position-x', Math.floor((Math.random()*800)-400));
-		}); 
+		});
 	};
-	
+
 	function initializeNavigation() {
 		//FILL ORDER OF STATES
 		WRC.navigation.states = [];
@@ -304,9 +303,9 @@ WRC.PageController = function() {
 			WRC.navigation.states.push(path);
 		});
 	};
-	
+
 	function createNavigation() {
-		
+
 		//RACE LOCATIONS
 		var locationGroup;
 		$('#races-info li').each(function(i, e) {
@@ -321,7 +320,7 @@ WRC.PageController = function() {
 				if (insertPosition.length == 0) insertPosition = $('#race-locations hr.fixed').first();
 				insertPosition.after(locationGroup);
 			}
-			
+
 			//CREATE ITEMS
 			var menuItem = $(document.createElement('li'));
 			var menuLink = $(document.createElement('a'));
@@ -330,10 +329,10 @@ WRC.PageController = function() {
 			menuLink.attr('href', "#/" + path[path.length-1]);
 			menuItem.attr('data-href', href);
 			menuLink.text($(e).data('country'));
-			
+
 			menuItem.append(menuLink);
 			locationGroup.append(menuItem);
-			
+
 			//CREATE SEASON NAVIGATION
 			var $seasonItem = $('#race-seasons ul').find('li[data-season=' + year + ']');
 			if ($seasonItem.length == 0) {
@@ -346,22 +345,22 @@ WRC.PageController = function() {
 				$seasonItem.append($seasonLink);
 				$('#race-seasons ul').first().append($seasonItem);
 			}
-			
-			
+
+
 		});
-		
+
 		/*
 		$('#race-seasons li').last().addClass('active');
 		$('#race-seasons ul').first().css('top', -$('#race-seasons li.active').first().index() * 22);
 		*/
 
 	};
-	
+
 	function fromCoordinatesToPixel(coordinates) {
-		var x = Math.round(pixelGlobeCenter.x + (coordinates.long * xPixelsToDegreesRatio));
+		var x = Math.round(pixelGlobeCenter['x'] + (coordinates['long'] * xPixelsToDegreesRatio));
 		var f = Math.min(Math.max(Math.sin(coordinates.lat * radiansToDegrees), -0.9999), 0.9999);
 		var y = Math.round(pixelGlobeCenter.y + 0.5 * Math.log((1 + f) / (1 - f)) * -yPixelsToRadiansRatio);
 		return {x: Math.round(x) + smallMapOffsetX, y: Math.round(y) + smallMapOffsetY};
 	};
-	
+
 };

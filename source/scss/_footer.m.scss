@@ -1,27 +1,21 @@
-
 @import "bourbon/bourbon";
 @import "mixins";
 
 
 body > footer {
-	left: 0;
-	right: 0;
+	position: relative;
+	width: 100%;
 
-	> .floor {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		z-index: 3;
+	.floor {
+		display: none;
 	}
 
-	> nav {
-		overflow: hidden;
+	nav {
 		display: block;
-		position: absolute;
+		position: relative;
+		overflow: hidden;
 		width: 100%;
-		height: 83px;
-		bottom: 0;
-		z-index: 200;
+		height: 80px;
 
 		&:hover {
 			//overflow: visible;
@@ -45,12 +39,16 @@ body > footer {
 	}
 
 	.richard-balint-logo {
-		width: 150px;
+		width: 115px;
 		height: 83px;
+
+		hr:first-child {
+			display: none;
+		}
 
 		h2 {
 			display: block;
-			height: 54px;
+			height: 40px;
 			text-transform: uppercase;
 			font-family: 'DaysRegular';
 			font-size: 18px;
@@ -68,8 +66,14 @@ body > footer {
 		position: absolute;
 		width: 230px;
 		height: 83px;
-		right: 40px;
+		right: 20px;
 		bottom: 0;
+		@include transform(scale(0.6));
+		@include transform-origin(right bottom);
+
+		hr:first-child {
+			display: none;
+		}
 
 		h2 {
 			display: block;
@@ -104,45 +108,19 @@ body > footer {
 	}
 
 	.sponsors {
-		display: block;
-		position: absolute;
-		left: 50%;
-		bottom: 32px;
-		margin-left: -76px;
-		opacity: 0.6;
-
-		li {
-			display: inline-block;
-			vertical-align: middle;
-
-			a {
-				display: block;
-				color: rgba(#000, 0);
-				font-size: 0;
-			}
-		}
-
-		@include mediaquery(width, 0px, 1000px) {
-			display: none;
-		}
+		display: none;
 	}
 
 	.carnationgroup-logo {
-		display: block;
-		position: absolute;
-		left: 50%;
-		bottom: 8px;
-		margin: 0 0 0 -74px;
-		font-size: 0;
-		color: rgba(0, 0, 0, 0);
+		display: none;
 	}
 
 	.social-container {
 		display: block;
 		position: absolute;
-		width: 250px;
-		bottom: 30px;
-		left: 180px;
+		bottom: 48px;
+		width: 100%;
+		text-align: center;
 
 		a.fb-join {
 			display: inline-block;
@@ -151,9 +129,8 @@ body > footer {
 			vertical-align: top;
 		}
 
-		> li {
-			display: block;
-			float: left;
+		li {
+			display: inline-block;
 			vertical-align: top;
 			font-size: 0;
 			color: rgba(#000, 0);

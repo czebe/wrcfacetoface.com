@@ -1,0 +1,244 @@
+
+@import "bourbon/bourbon";
+@import "mixins";
+@import "shop-cart-common";
+
+
+
+/* ############################################################################################ */
+/* SHOP PAGE */
+/* ############################################################################################ */
+
+
+body.shop {
+
+	.page {
+		@include absolute;
+		width: 100%;
+		height: auto;
+		margin: -230px auto 0 auto;
+		top: 50%;
+		text-align: center;
+		white-space: nowrap;
+
+
+		> aside {
+			.cartbasket {
+				top: 3px;
+				left: 50px;
+			}
+		}
+
+		> article {
+			overflow: hidden;
+		}
+	}
+}
+
+#cart-contents {
+	display: none;
+}
+
+
+/* ############################################################################################ */
+/* LEFT COLUMN */
+/* ############################################################################################ */
+
+
+#cartsummary {
+
+	a {
+		@include absolute;
+		top: 22px;
+		margin-top: 250px;
+		margin-left: 38px;
+		text-align: center;
+		text-decoration: none;
+
+		span {
+			@include fontstyle-heading(17px, 60px);
+			width: 100%;
+			text-align: center;
+		}
+
+		.prev-next-shine {
+			@include absolute;
+			top: 0;
+			right: 50px;
+			margin: 0 auto;
+			opacity: .8;
+		}
+
+		nav {
+			width: 186px;
+			height: 60px;
+			background-color: $wrc-green;
+
+			&:before {
+				@include triangle-border(60, 186, $wrc-green, -1);
+			}
+
+			&:after {
+				@include triangle-border(60, 186, $wrc-green, 1);
+			}
+
+		}
+
+		&:hover nav {
+			background-color: #000;
+
+			&:before {
+				border-right-color: #000;
+			}
+
+			&:after {
+				border-left-color: #000;
+			}
+		}
+	}
+}
+
+
+/* ############################################################################################ */
+/* RIGHT COLUMN */
+/* ############################################################################################ */
+
+
+#products-container {
+
+	ul {
+		position: relative;
+		display: inline-block;
+		width: auto;
+		overflow: hidden;
+
+		&.empty-catalog {
+			width: 0;
+			overflow: hidden;
+
+			li {
+				width: 450px;
+			}
+
+			article {
+				@include fontstyle-heading(18px, 20px);
+				color: $wrc-grey-text;
+				text-align: left;
+			}
+		}
+	}
+
+	li {
+		display: inline-block;
+		width: 185px;
+		white-space: normal;
+		margin: 0 10px;
+		vertical-align: top;
+	}
+
+	article {
+		text-align: center;
+		font-size: 16px;
+		height: 400px;
+	}
+
+	.thumbnail {
+		width: 185px;
+		height: 160px;
+		text-decoration: none;
+
+		svg {
+			position: relative;
+			margin: 4px 0;
+		}
+
+		.thumbnail-stroke {
+			@include absolute;
+			width: 185px;
+			height: 160px;
+			margin: 0 auto;
+			top: 0;
+		}
+
+		&:hover {
+			svg {
+				z-index: 2;
+			}
+
+			.thumbnail-stroke {
+				&:after {
+					position: absolute;
+					display: block;
+					width: 70%;
+					height: 50%;
+					margin: 60px 28px 0 28px;
+					content: '';
+					@include box-shadow(0px 5px 15px 5px rgba(#000, 0.6));
+				}
+			}
+		}
+	}
+
+	h2 {
+		display: block;
+		@include fontstyle-heading(14px, 16px);
+		margin-top: 15px;
+		padding: 0 20px;
+		height: 50px;
+	}
+
+	.unit-price {
+		margin: 15px auto;
+		color: $wrc-grey-text;
+
+		span {
+			display: block;
+			font-size: 10px;
+			margin-bottom: 2px;
+		}
+	}
+
+	.addtocart {
+		position: relative;
+		display: inline-block;
+
+		a {
+			position: relative;
+			display: inline-block;
+			width: 110px;
+			height: 26px;
+			background-color: $wrc-green;
+			color: #000;
+
+			&:before {
+				@include triangle-border(26, 110, $wrc-green, -1);
+			}
+
+			&:after {
+				@include triangle-border(26, 110, $wrc-green, 1);
+			}
+
+			&:hover {
+				color: #FFF;
+				background-color: #000;
+
+				&:before {
+					border-right-color: #000;
+				}
+
+				&:after {
+					border-left-color: #000;
+				}
+			}
+
+			span {
+				@include fontstyle-heading(11px, 26px);
+			}
+
+			.largedot-shine {
+				/* TODO: EXPORT TO VECTOR */
+			}
+		}
+
+	}
+}

@@ -1,0 +1,130 @@
+@import "bourbon/bourbon";
+@import "mixins";
+
+
+body.contact {
+
+	/* ############################################################################################ */
+	/* CONTENT */
+	/* ############################################################################################ */
+
+	.content {
+		position: relative;
+		@include size(100% auto);
+		@include box-sizing(border-box);
+		overflow: hidden;
+		padding: 20px;
+
+		svg {
+			display: block;
+			@include position(absolute, 0px 0 0 0px);
+			visibility: hidden;
+			z-index: -1;
+		}
+
+		h1 {
+			@include fontstyle-heading;
+			margin-bottom: 6px;
+		}
+
+		h2 {
+			@include fontstyle-bodytext;
+			color: #FFF;
+		}
+
+		address {
+			padding: 20px;
+			@include box-sizing(border-box);
+			margin-bottom: 80px;
+		}
+
+		a {
+			display: block;
+			position: relative;
+			@include fontstyle-detailstext;
+			white-space: nowrap;
+			margin-bottom: 10px;
+
+			html.no-touch &:hover, html.touch & {
+				color: $wrc-green;
+
+				figure {
+					background-color: $wrc-green;
+
+					&:before {
+						border-right-color: $wrc-green;
+					}
+
+					&:after {
+						border-left-color: $wrc-green;
+					}
+				}
+			}
+
+			p {
+				color: #FFF;
+				display: inline-block;
+				vertical-align: middle;
+				white-space: nowrap;
+				margin-left: 30px;
+			}
+		}
+
+		figure {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			line-height: 60px;
+			width: 35px;
+			height: 60px;
+
+			&:before {
+				@include triangle-border(60, 35, transparent, -1);
+			}
+
+			&:after {
+				@include triangle-border(60, 35, transparent, 1);
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+	}
+
+	/* ############################################################################################ */
+	/* PAGE DECORATIONS */
+	/* ############################################################################################ */
+
+	.car {
+		position: absolute;
+		width: 200%;
+		left: 0;
+		bottom: 0;
+
+		canvas {
+			@include size(100% auto);
+		}
+	}
+
+	.form-bg-container {
+		@include absolute;
+		visibility: hidden;
+		z-index: -1;
+	}
+
+	.dust {
+		display: none;
+	}
+
+	/* ############################################################################################ */
+	/* FOOTER */
+	/* ############################################################################################ */
+
+	> footer .floor {
+		background: url(/i/floor-dark.png) 50% repeat-x;
+		height: 149px;
+	}
+}

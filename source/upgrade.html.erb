@@ -1,29 +1,26 @@
-<!DOCTYPE HTML>
-<html>
-	<link rel="stylesheet" href="/css/upgrade.css" type="text/css" media="screen" />
-</head>
-<body class="intro">
-	<div class="page">
-		<article>
-			<div>
-				<hgroup>
-					<h1>Your browser is not supported</h1>
-					<h2><span>Please upgrade it to get the full experience on our site.</span></h2>
-				</hgroup>
-				<p>Select one of these fine browser:</p>
-				<div class="browser-icons">
-					<a href="https://www.google.com/intl/en/chrome/browser/" target="_blank"><img src="/i/browsericons/chrome.png" width="128" height="128"></a>
-					<a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank"><img src="/i/browsericons/firefox.png" width="128" height="128"></a>
-					<a href="http://www.apple.com/safari/" target="_blank"><img src="/i/browsericons/safari.png" width="128" height="128"></a>
-					<a href="#" onclick="javascript:alert('No, don\'t get this. Seriously.');return false;"><img src="/i/browsericons/ie.png" width="128" height="128"></a>
-				</div>
-				<h3><a href="/" onclick="WRC.pageController.disableWarning();">...or continue at your own risk...</a></h3>
+---
+layout: pages
+bodyclass: intro
+---
+<div class="page">
+	<article>
+		<div>
+			<hgroup>
+				<h1>Your browser is not supported</h1>
+				<h2><span>Please upgrade it to get the full experience on our site.</span></h2>
+			</hgroup>
+			<p>Select one of these fine browser:</p>
+			<div class="browser-icons">
+				<a href="https://www.google.com/intl/en/chrome/browser/" target="_blank"><img src="/i/browsericons/chrome.png?action=thumbnail&width=128&height=128" width="128" height="128"></a>
+				<a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank"><img src="/i/browsericons/firefox.png?action=thumbnail&width=128&height=128" width="128" height="128"></a>
+				<a href="http://www.apple.com/safari/" target="_blank"><img src="/i/browsericons/safari.png?action=thumbnail&width=128&height=128" width="128" height="128"></a>
+				<a href="#" onclick="javascript:alert('No, don\'t get this. Seriously.');return false;"><img src="/i/browsericons/ie.png?action=thumbnail&width=128&height=128" width="128" height="128"></a>
 			</div>
-		</article>
-	</div>
-	<script>
-		var scriptsQueue = scriptsQueue || new Array();
-		scriptsQueue.push('/js/upgrade.js');
-	</script>
-</body>
-</html>
+			<h3><a href="/" onclick="WRC.pageController.disableWarning();">...or continue at your own risk...</a></h3>
+		</div>
+	</article>
+</div>
+<script>
+	var scriptsQueue = scriptsQueue || new Array();
+	scriptsQueue.push('/js/upgrade.js');
+</script>

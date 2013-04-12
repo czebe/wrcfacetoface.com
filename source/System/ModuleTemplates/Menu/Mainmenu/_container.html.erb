@@ -1,9 +1,34 @@
 <a id="menu-opener" class="vectorsprite menu-opener">Menu</a>
 <header>
 	<nav>
-		<svg version="1.1" id="menu-SVG" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="750px" height="650px" space="preserve">
-			<polygon fill="none" opacity="0.5" vector-effect="non-scaling-stroke" stroke="#FFFFFF" stroke-width="1" x="10px" y="30px" points="154,324 264,515 487,515 596,324 487,134 264,134"></polygon>
+		<svg version="1.1" id="menu-SVG" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px"
+			 y="0px" width="750px" height="650px" space="preserve">
+			<polygon fill="none" opacity="0.5" vector-effect="non-scaling-stroke" stroke="#FFFFFF" stroke-width="1"
+					 x="10px" y="30px" points="154,324 264,515 487,515 596,324 487,134 264,134"></polygon>
 		</svg>
-		{tag_menugroup}
+		<% if development? %>
+			<ul>
+				<li><a href="/about" id="m1"><span class="vectorsprite mainmenu-point"></span><span
+						class="vectorsprite mainmenu-line1 animate-opacity"></span><span class="text">about</span><span
+						class="vectorsprite mainmenu-line2 animate-opacity"></span></a></li>
+				<li><a href="/contact" id="m2"><span class="vectorsprite mainmenu-point"></span><span
+						class="vectorsprite mainmenu-line1 animate-opacity"></span><span class="text">contact</span><span
+						class="vectorsprite mainmenu-line2 animate-opacity"></span></a></li>
+				<li><a href="/downloads" id="m3"><span class="vectorsprite mainmenu-point"></span><span
+						class="vectorsprite mainmenu-line1 animate-opacity"></span><span class="text">downloads</span><span
+						class="vectorsprite mainmenu-line2 animate-opacity"></span></a></li>
+				<li><a href="/shop" id="m4"><span class="vectorsprite mainmenu-point"></span><span
+						class="vectorsprite mainmenu-line1 animate-opacity"></span><span class="text">shop</span><span
+						class="vectorsprite mainmenu-line2 animate-opacity"></span></a></li>
+				<li><a href="/products" id="m5"><span class="vectorsprite mainmenu-point"></span><span
+						class="vectorsprite mainmenu-line1 animate-opacity"></span><span class="text">products</span><span
+						class="vectorsprite mainmenu-line2 animate-opacity"></span></a></li>
+				<li><a href="/races" id="m6"><span class="vectorsprite mainmenu-point"></span><span
+						class="vectorsprite mainmenu-line1 animate-opacity"></span><span class="text">races</span><span
+						class="vectorsprite mainmenu-line2 animate-opacity"></span></a></li>
+			</ul>
+		<% else %>
+			{tag_menugroup}
+		<% end %>
 	</nav>
 </header>

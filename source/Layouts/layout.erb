@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!--
+
+                    ████
+                  ██    ██
+            ████  ██    ██  ████            CarnationGroup - A part of POSSIBLE
+          ██    ████    ████    ██          #digitalcreativecurious
+          ██      ██    ██      ██
+            ██                ██            that's who we are. talk to us, show us your code or in fact fool around with ours.
+        ████████            ████████        you can get in touch with us through our site.
+      ██                            ██      try to impress us and maybe you will get some extra points :)
+      ██                            ██
+        ████████            ████████
+            ██                ██
+          ██      ██    ██      ██
+          ██    ████    ████    ██          http://www.carnationgroup.com
+            ████  ██    ██  ████
+                  ██    ██
+                    ████
+
+-->
+<html class="no-js" dir="ltr" lang="en">
+<head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# website:http://ogp.me/ns/website#">
+	<meta charset="utf-8">
+
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+	<meta name="keywords" content="WRC, World Rally Championship, WRC Face to Face, Richard Balint, rally, cars, drivers, co-drivers, official, photographer, album, book, photo, photography">
+	<meta name="description" content="WRC Face to Face">
+	<meta name="author" content="Richard Balint">
+
+	<meta property="og:title" content="WRC Face to Face"/>
+	<meta property="og:description" content="WRC Face to Face - The Official Yearbook of the FIA World Rally Championship"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="http://<% if development? %>www.wrcfacetoface.com<% else %>{module_siteurl}/{module_pagename}<% end %>"/>
+	<meta property="og:image" content="http://<% if development? %>www.wrcfacetoface.com<% else %>{module_siteurl}<% end %>/i/products/wrc2012/wrc_2012_cover_full.png"/>
+	<meta property="og:site_name" content="WRC Face to Face"/>
+	<meta property="fb:app_id" content="451376674915199" />
+	<%= data.page.meta %>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=yes">
+
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="icon" type="image/png" href="/favicon.png"/>
+	<link rel="apple-touch-icon" href="/i/apple-touch-icon.png">
+
+	<link rel="stylesheet" type="text/css" media="only screen" href="/css/mobile.css" />
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 601px)" href="/css/site.css" />
+	<%= data.page.css %>
+
+	<title></title>
+
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-35510538-1']);
+		_gaq.push(['_setDomainName', '<% if development? %>www.wrcfacetoface.com<% else %>{module_sitehost}<% end %>']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
+	</script>
+	<script type="text/javascript" src="/js/lib/modernizr.min.js"></script>
+	<%= data.page.script %>
+
+</head>
+<body class="<%= data.page.bodyclass %>">
+<%= yield %>
+</body>
+</html>

@@ -1,0 +1,272 @@
+
+@import "bourbon/bourbon";
+@import "mixins";
+
+
+/* ############################################################################################ */
+/* CART NAVIGATION */
+/* ############################################################################################ */
+
+
+.navigate-cart {
+	@include absolute;
+	right: -70px;
+	top: 50%;
+	overflow: hidden;
+	margin-top: -30px;
+	z-index: 10;
+
+	a {
+		display: block;
+		width: 220px;
+		height: 60px;
+		text-decoration: none;
+
+		.next-label {
+			@include fontstyle-heading(17px, 19px);
+			position: relative;
+			display: block;
+			padding-top: 20px;
+			padding-left: 24px;
+		}
+
+		.prev-next-shine {
+			@include absolute;
+			top: 0;
+			left: 5px;
+			opacity: .8;
+		}
+	}
+
+	&:hover {
+		right: -20px;
+
+		.prev-next-shine {
+			left: 55px;
+		}
+
+		.next-label {
+			padding-left: 30px;
+		}
+	}
+}
+
+/* ############################################################################################ */
+/* SHOPPING CART FORM */
+/* ############################################################################################ */
+
+
+.page.cart {
+	@include absolute;
+	width: 100%;
+	height: auto;
+	margin: -230px auto 0 auto;
+	top: 50%;
+	text-align: center;
+	white-space: nowrap;
+
+	> aside .cartbasket {
+		top: 3px;
+		right: 0px;
+	}
+
+	> article {
+		height: 430px;
+	}
+}
+
+/* ############################################################################################ */
+/* PRODUCTS IN CART */
+/* ############################################################################################ */
+
+
+#products-container {
+
+	@include user-select(none);
+
+	> div {
+		position: relative;
+		width: auto;
+		margin: 0 0 10px 0px;
+		white-space: nowrap;
+	}
+
+	.productitemcell {
+		display: inline-block;
+		position: relative;
+		width: 185px;
+		margin: 0 10px;
+		white-space: normal;
+		font-size: 16px;
+		text-align: center;
+		vertical-align: top;
+	}
+}
+
+#product-thumbnails {
+
+	> .productitemcell {
+		cursor: pointer;
+
+		> a {
+			display: block;
+		}
+
+		> img {
+			visibility: hidden;
+		}
+	}
+
+	.vectorsprite.thumbnail-stroke {
+		@include absolute;
+		@include align-tl;
+	}
+}
+
+#product-codes {
+	display: none;
+}
+
+#product-names a {
+	@include fontstyle-heading(14px, 16px);
+	padding: 0 20px;
+	display: block;
+}
+
+#unit-prices {
+	color: $wrc-grey-text;
+
+	> .productitemcell > span {
+		font-size: 10px;
+		display: block;
+		margin-bottom: 2px;
+	}
+}
+
+#subtotals {
+	margin-top: 325px;
+	color: #FFF;
+
+	> .productitemcell {
+		font-weight: bold;
+		font-size: 18px;
+
+		> span {
+			font-size: 10px;
+			display: block;
+			margin-bottom: 2px;
+		}
+	}
+}
+
+#product-quantities {
+	margin-top: 272px;
+
+	> .productitemcell > input {
+		padding: 0;
+		text-align: center;
+		margin: 0 auto;
+		font-size: 12px;
+		margin: 14px auto 0 auto;
+		padding-right: 2px;
+		width: 30px;
+	}
+
+	.quantity-controls {
+		position: absolute;
+		width: 100%;
+		top: 0;
+
+		> a {
+			display: block;
+			position: absolute;
+
+			> div {
+				opacity: 0.2;
+			}
+
+			> span {
+				@include absolute;
+				@include fontstyle-heading(34px, 36px);
+				top: -7px;
+				left: 0px;
+				width: 32px;
+				height: 27px;
+			}
+		}
+	}
+
+	.decrease {
+		right: 50%;
+		margin-right: 10px;
+	}
+
+	.increase {
+		left: 50%;
+		margin-left: 10px;
+	}
+}
+
+#remove-buttons {
+	position: absolute !important;
+	top: 0;
+	z-index: 2;
+
+	.productitemcell a {
+		font-size: 0;
+		color: rgba(0, 0, 0, 0);
+		display:block;
+	}
+
+	.remove {
+		margin-left: 150px;
+	}
+}
+
+
+/* ############################################################################################ */
+/* OVERRIDE BC GENERATED CLASSES */
+/* ############################################################################################ */
+
+
+#catCartDetails {
+	@include absolute;
+	@include fullsize;
+}
+
+.cartLink {
+	position: relative;
+	display: block;
+	margin: -70px auto 0 auto;
+	top: 50%;
+	@include fontstyle-heading(16px);
+	opacity: 0.5;
+	text-align: center;
+	width: 500px;
+
+	> span {
+		display: block;
+		position: relative;
+		font-size: 30px;
+		margin-top: 30px;
+		text-decoration: underline;
+	}
+}
+
+.shippingCountryDiv {
+	@include absolute;
+	@include align-tl;
+}
+
+.shippingDiv {
+	@include absolute;
+	top: 36px;
+}
+
+#shippingCountrySpan {
+	display: none;
+}
+
+#shippingSpan {
+	display: none;
+}

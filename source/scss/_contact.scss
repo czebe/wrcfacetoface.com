@@ -1,0 +1,88 @@
+@import "bourbon/bourbon";
+@import "mixins";
+
+body.contact {
+
+	/* ############################################################################################ */
+	/* CONTENT */
+	/* ############################################################################################ */
+
+	.content {
+		@include position(absolute, 50% 0 0 50%);
+		@include size(730 370);
+		margin: -185px auto 0 -365px;
+		padding: 0;
+		overflow: visible;
+
+		hgroup {
+			margin-left: 330px;
+		}
+
+		address {
+			padding: 0;
+			margin-bottom: 0;
+		}
+
+
+		a {
+			@include absolute;
+			margin-bottom: 0;
+
+			&.address {
+				left: 460px;
+				top: 92px;
+			}
+
+			&.phone {
+				left: 605px;
+				top: 174px;
+			}
+
+			&.email {
+				left: 460px;
+				top: 256px;
+			}
+		}
+
+	}
+
+	/* ############################################################################################ */
+	/* PAGE DECORATIONS */
+	/* ############################################################################################ */
+
+	.car {
+		width: auto;
+		left: 0;
+		bottom: 25px;
+
+		canvas {
+			width: auto;
+		}
+	}
+
+	/* ############################################################################################ */
+	/* DUST */
+	/* ############################################################################################ */
+
+	.dust {
+		@include absolute;
+		@include fullsize;
+		overflow: hidden;
+		top: 0;
+		z-index: -2;
+		opacity: .75;
+
+		ul, li {
+			@include absolute;
+			@include fullsize;
+		}
+	}
+
+
+
+}
+
+
+
+
+

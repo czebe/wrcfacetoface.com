@@ -1,1 +1,20 @@
-<li data-index="{tag_counter}" data-href="{tag_itemurl_nolink}" data-date="{tag_releasedate}" data-country="{tag_Country}">{tag_name_nolink}</li>
+<% if development? %>
+	<%# FOR TESTING PURPOSES COPY THE SERVER GENERATED LIST HERE.
+		THE LIST IS PRODUCED BY THE BACKEND. %>
+	<li data-index="1" data-href="/race-photos/wrc-2012-01-monaco" data-date="12-Jan-2012" data-country="Monaco">WRC 2012 - 01 - Monaco</li>
+	<li data-index="2" data-href="/race-photos/wrc-2012-02-sweden" data-date="10-Feb-2012" data-country="Sweden">WRC 2012 - 02 - Sweden</li>
+	<li data-index="3" data-href="/race-photos/wrc-2012-03-mexico" data-date="09-Mar-2012" data-country="Mexico">WRC 2012 - 03 - Mexico</li>
+	<li data-index="4" data-href="/race-photos/wrc-2012-04-portugal" data-date="30-Mar-2012" data-country="Portugal">WRC 2012 - 04 - Portugal</li>
+	<li data-index="5" data-href="/race-photos/wrc-2012-05-argentina" data-date="27-Apr-2012" data-country="Argentina">WRC 2012 - 05 - Argentina</li>
+	<li data-index="6" data-href="/race-photos/wrc-2012-06-greece" data-date="25-May-2012" data-country="Greece">WRC 2012 - 06 - Greece</li>
+	<li data-index="7" data-href="/race-photos/wrc-2012-07-new-zealand" data-date="23-Jun-2012" data-country="New Zealand">WRC 2012 - 07 - New Zealand</li>
+	<li data-index="8" data-href="/race-photos/wrc-2012-08-finland" data-date="03-Aug-2012" data-country="Finland">WRC 2012 - 08 - Finland</li>
+	<li data-index="9" data-href="/race-photos/wrc-2012-09-germany" data-date="24-Aug-2012" data-country="Germany">WRC 2012 - 09 - Germany</li>
+	<li data-index="10" data-href="/race-photos/wrc-2012-10-wales" data-date="14-Sep-2012" data-country="Wales">WRC 2012 - 10 - Wales</li>
+	<li data-index="11" data-href="/race-photos/wrc-2012-11-france" data-date="05-Oct-2012" data-country="France">WRC 2012 - 11 - France</li>
+	<li data-index="12" data-href="/race-photos/wrc-2012-12-italy" data-date="19-Oct-2012" data-country="Italy">WRC 2012 - 12 - Italy</li>
+	<li data-index="13" data-href="/race-photos/wrc-2012-13-spain" data-date="09-Nov-2012" data-country="Spain">WRC 2012 - 13 - Spain</li>
+	<li data-index="14" data-href="/race-photos/wrc-2013-01-monaco" data-date="15-Jan-2013" data-country="Monaco">WRC 2013 - 01 - Monaco</li>
+<% else %>
+	<li data-index="{tag_counter}" data-href="{tag_itemurl_nolink}" data-date="{tag_releasedate}" data-country="{tag_Country}">{tag_name_nolink}</li>
+<% end %>

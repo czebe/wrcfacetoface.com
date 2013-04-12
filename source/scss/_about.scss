@@ -1,0 +1,132 @@
+
+@import "mixins";
+
+
+/* ############################################################################################ */
+/* ABOUT PAGE */
+/* ############################################################################################ */
+
+
+body.about {
+	.page {
+		background: url(/i/dither.png) repeat 50% 50% transparent;
+		
+		> article {
+			@include absolute;
+			@include align-tl;
+			@include fullsize;
+		}
+
+		> svg {
+			@include absolute;
+			@include centered;
+			margin-top: -20px;
+			margin-left: -100px;
+			z-index: -1;
+		}
+
+	}
+
+	article {
+		
+		div {
+			position: relative;
+			width: auto;
+			display: inline-block;
+			text-align: left;
+			margin: 90px auto 0 40%;
+			max-width: 500px;
+		}
+		
+		h1 {
+			@include fontstyle-heading;
+			margin-bottom: 20px;
+		}
+		
+		section {
+			display: block;
+			@include fontstyle-bodytext(16px, 18px);
+			color: #777777;
+			padding-right: 5%;
+
+			p {
+				margin-top: 1em;
+			}
+
+			p:last-child {
+				text-align: center;
+			}
+
+			q {
+				color: #EEE;
+				text-align: center;
+				line-height: 22px;
+				display: block;
+				font-size: 17px;
+				font-style: italic;
+				margin-bottom: 1em;
+			}
+		}
+		
+		aside {
+			@include absolute;
+			@include align-tl;
+		}
+	}
+}
+
+
+/* ############################################################################################ */
+/* DUST */
+/* ############################################################################################ */
+
+
+.dust {
+	@include absolute;
+	@include fullsize;
+	top: 0;
+	z-index: -2;
+	opacity: .75;
+	
+	ul, li {
+		@include fullsize;
+		display: block;
+		position: absolute;
+	}
+
+	li:first-child {
+		opacity: 0.5;
+	}
+}
+
+.composite-alpha {
+	img {
+		display: none;
+	}
+}
+
+
+
+/* ############################################################################################ */
+/* PAGE DECORATIONS */
+/* ############################################################################################ */
+
+
+.author {
+	position: absolute;
+	left: 60px;
+	bottom: -2px;
+	width: auto;
+	height: 70%;
+	max-height: 683px;
+
+	img {
+		height: 100%;
+		width: auto;
+	}
+
+	canvas {
+		height: 100%;
+		width: auto;
+	}
+}

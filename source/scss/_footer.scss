@@ -1,0 +1,85 @@
+@import "bourbon/bourbon";
+@import "mixins";
+
+body > footer {
+	@include position(absolute, 0 0 0px 0);
+
+	.floor {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 3;
+	}
+
+	nav {
+		position: absolute;
+		height: 83px;
+		bottom: 0;
+		z-index: 200;
+	}
+
+	.richard-balint-logo {
+		width: 150px;
+
+		hr:first-child {
+			display: block;
+		}
+
+		h2 {
+			height: 54px;
+		}
+	}
+
+	.wrc {
+		right: 40px;
+		@include transform(none);
+
+		hr:first-child {
+			display: block;
+		}
+	}
+
+	.sponsors {
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 32px;
+		margin-left: -76px;
+		opacity: 0.6;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+
+			a {
+				display: block;
+				color: rgba(#000, 0);
+				font-size: 0;
+			}
+		}
+
+		@include mediaquery(width, 601px, 1000px) {
+			display: none;
+		}
+	}
+
+	.carnationgroup-logo {
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 8px;
+		margin: 0 0 0 -74px;
+		font-size: 0;
+		color: rgba(0, 0, 0, 0);
+	}
+
+	.social-container {
+		bottom: 30px;
+		right: auto;
+		left: 180px;
+		text-align: left;
+	}
+
+
+}

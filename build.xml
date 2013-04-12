@@ -1,0 +1,153 @@
+<project name="wrcfacetoface.com" default="build" basedir="./">
+
+	<property name="YUI-MAC" location="/usr/local/yuicompressor/build/yuicompressor-2.4.7.jar" />
+	<property name="JTIDY-MAC" location="/Users/czebem/Dev/jtidy/jtidy-r938.jar" />
+
+
+	<!-- WATCH SCSS -->
+
+	<target name="scss" description="watch scss folder">
+		<exec executable="scss" dir="./source" osfamily="mac">
+			<arg line="--watch scss:css" />
+			<arg line="-r ~/.rvm/gems/ruby-1.9.3-p374/gems/bourbon-3.0.1/lib/bourbon.rb" />
+		</exec>
+	</target>
+
+
+	<!-- RUN MIDDLEMAN LOCAL SERVER -->
+
+	<target name="test" description="run test server">
+		<exec executable="bundle" dir="./" osfamily="mac">
+			<arg line="exec" />
+			<arg line="middleman" />
+			<arg line="server" />
+		</exec>
+	</target>
+
+
+	<!-- BUILD PROJECT -->
+
+	<target name="build" description="build project">
+
+		<!-- ############################################################################## -->
+		<!-- BUILD CSS -->
+		<!-- ############################################################################## -->
+
+		<exec executable="scss" dir="./source" osfamily="mac">
+			<arg line="--update ./scss:./css" />
+			<arg line="--force" />
+			<arg line="-t compressed" />
+			<arg line="-r ~/.rvm/gems/ruby-1.9.3-p374/gems/bourbon-3.0.1/lib/bourbon.rb" />
+		</exec>
+
+		<!-- ############################################################################## -->
+		<!-- PROCESS HTML FILES, COPY ASSETS TO ./build -->
+		<!-- ############################################################################## -->
+
+		<exec executable="bundle" dir="./" osfamily="mac">
+			<arg line="exec" />
+			<arg line="middleman" />
+			<arg line="build" />
+			<arg line="--clean --verbose" />
+		</exec>
+
+		<!-- ############################################################################## -->
+		<!-- COMPILE LIBRARY AND PLUGINS TO ONE FILE -->
+		<!-- ############################################################################## -->
+
+		<filelist id="library" dir="./source/js">
+
+			<!-- STANDARD JS LIBRARIES -->
+			<file name="lib/date.js" />
+			<file name="lib/jquery.address.min.js" />
+			<file name="lib/jquery.jscrollpane.min.js" />
+			<file name="lib/jquery.mousewheel.js" />
+			<file name="lib/jquery.cookie.js" />
+			<file name="lib/jquery.easing.1.3.js" />
+
+			<!-- CUSTOM PLUGINS -->
+			<file name="plugins/plugins.js" />
+
+		</filelist>
+
+		<concat destfile="./source/js/plugins.js">
+			<filelist refid="library" />
+		</concat>
+
+		<!-- ############################################################################## -->
+		<!-- MINIFY JS -->
+		<!-- ############################################################################## -->
+
+		<apply executable="java" dir="./source/js" addsourcefile="false" osfamily="mac">
+			<arg line="-jar ${YUI-MAC}" />
+			<arg line="--type js" />
+			<fileset dir="./source/js" includes="*.js"/>
+			<redirector>
+				<inputmapper type="glob" from="*" to="./source/js/*"/>
+				<outputmapper id="out" type="glob" from="*.js" to="./source/js/*.min.js"/>
+			</redirector>
+		</apply>
+
+		<!-- ############################################################################## -->
+		<!-- COPY JS FILES MANUALLY (ignored in config.rb) -->
+		<!-- ############################################################################## -->
+
+		<copy todir="./build/js/lib">
+			<fileset dir="./source/js/lib">
+				<filename name="jquery.min.js" />
+				<filename name="modernizr.min.js" />
+			</fileset>
+		</copy>
+
+		<copy todir="./build/js">
+			<fileset dir="./source/js">
+				<include name="*.min.js" />
+			</fileset>
+		</copy>
+
+		<delete>
+			<fileset dir="./source/js" includes="*.min.js" />
+		</delete>
+
+		<!-- ############################################################################## -->
+		<!-- RENAME .min.js FILES TO .js -->
+		<!-- ############################################################################## -->
+
+		<move todir="./build/js" includeemptydirs="false">
+			<fileset dir="./build/js">
+				<include name="*.min.js"/>
+			</fileset>
+			<mapper type="glob" from="*.min.js" to="*.js"/>
+		</move>
+
+		<!-- ############################################################################## -->
+		<!-- COPY _SYSTEM MANUALLY, SINCE IT'S IGNORED BY MIDDLEMAN -->
+		<!-- ############################################################################## -->
+
+		<move todir="./build/_System">
+			<fileset dir="./build/System" />
+		</move>
+
+	</target>
+
+
+	<!-- NOT WORKING -->
+	<target name="tidy">
+
+		<!-- ############################################################################## -->
+		<!-- TIDY HTML CODE -->
+		<!-- ############################################################################## -->
+
+		<taskdef name="tidy" classname="org.w3c.tidy.ant.JTidyTask">
+			<classpath>
+				<pathelement location="${JTIDY-MAC}"/>
+			</classpath>
+		</taskdef>
+
+		<tidy destdir="./build" properties="config.tidy">
+			<fileset dir="./build" />
+		</tidy>
+
+	</target>
+
+</project>

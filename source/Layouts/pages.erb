@@ -1,0 +1,29 @@
+<% if development? %>
+<% wrap_layout :layout do %>
+
+<!-- HEADER -->
+<%= partial "System/ModuleTemplates/Menu/Mainmenu/container" %>
+
+<!-- FOOTER -->
+<%= partial "System/ContentHolders/Footer" %>
+
+<!-- PAGE CONTENT -->
+<%= yield %>
+
+<!-- SCRIPTS -->
+<%= partial "System/ContentHolders/Scripts" %>
+
+<!-- PRELOAD LAYER -->
+<%= partial "System/ContentHolders/Preload" %>
+
+<% end %>
+<% else %>
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body class="<%= data.page.bodyclass %>">
+	<%= yield %>
+</body>
+</html>
+<% end %>
+

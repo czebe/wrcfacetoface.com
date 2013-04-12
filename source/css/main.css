@@ -1,0 +1,82 @@
+/*
+Syntax error: Function radial-gradient doesn't have an argument named $fallback.
+        on line 249 of ./scss/main.scss, in `background-image'
+        from line 249 of ./scss/main.scss
+
+244: 	.glow {
+245: 		width: 70px;
+246: 	  	height: 70px;
+247: 		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$wrc-green', endColorstr='#008dc72d',GradientType=1 );
+248: 		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+249: 		@include background-image(radial-gradient(50% 50%, circle contain, rgba($wrc-green, 1) 0%, rgba($wrc-green, 0) 100%, $fallback: $wrc-green));
+250: 		opacity: 0.75;
+251: 	}
+252: 
+253: 	.glow.animated {
+254: 		-webkit-animation: fade 1s ease-in-out infinite alternate;
+
+Backtrace:
+./scss/main.scss:249:in `background-image'
+./scss/main.scss:249
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:21:in `perform_arguments'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/script/funcall.rb:186:in `perform_sass_fn'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/script/funcall.rb:97:in `_perform'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/script/node.rb:40:in `perform'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:257:in `block in visit_mixin'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:257:in `map'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:257:in `visit_mixin'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/tree/root_node.rb:20:in `render'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/exec.rb:424:in `watch_or_update'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/exec.rb:307:in `process_result'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/exec.rb:41:in `parse'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/lib/sass/exec.rb:21:in `parse!'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/gems/sass-3.2.5/bin/scss:8:in `<top (required)>'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/bin/scss:19:in `load'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/bin/scss:19:in `<main>'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/czebem/.rvm/gems/ruby-1.9.3-p374/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Function radial-gradient doesn't have an argument named $fallback.\A         on line 249 of ./scss/main.scss, in `background-image'\A         from line 249 of ./scss/main.scss\A \A 244: 	.glow {\A 245: 		width: 70px;\A 246: 	  	height: 70px;\A 247: 		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$wrc-green', endColorstr='#008dc72d',GradientType=1 );\A 248: 		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiM4ZGM3MmQiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvcmFkaWFsR3JhZGllbnQ+CiAgPHJlY3QgeD0iLTUwIiB5PSItNTAiIHdpZHRoPSIxMDEiIGhlaWdodD0iMTAxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);\A 249: 		@include background-image(radial-gradient(50% 50%, circle contain, rgba($wrc-green, 1) 0%, rgba($wrc-green, 0) 100%, $fallback: $wrc-green));\A 250: 		opacity: 0.75;\A 251: 	}\A 252: \A 253: 	.glow.animated {\A 254: 		-webkit-animation: fade 1s ease-in-out infinite alternate;"; }
